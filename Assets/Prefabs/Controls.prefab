@@ -44,7 +44,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114073436707227492
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
@@ -61,7 +61,7 @@ MonoBehaviour:
   _assetGuid: 7fb6ee37d4f4246bb88d9051ac375a14
 --- !u!114 &114093895583258012
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
@@ -82,9 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af6b94d0796a493890fca39a3b12d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   players:
   - name: Player 1
-    controller: 4
+    controller: 0
     keyboard: 1
     inputs:
     - name: Horizontal
@@ -108,10 +109,10 @@ MonoBehaviour:
       value: 0
     - name: Vertical
       posKeys:
-      - s
-      negKeys:
-      - w
       - z
+      - w
+      negKeys:
+      - s
       axis: 03000000
       buttons: 
       deadzone: 0.2
