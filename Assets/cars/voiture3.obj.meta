@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 79eb6f0cd6697b741b69f89d128082a1
+timeCreated: 1520051140
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: detail_exhaust_74
+    100002: detail_fenderSquare_75
+    100004: detail_fenderSquare_76
+    100006: detail_fenderSquare_77
+    100008: detail_fenderSquare_78
+    100010: detail_policeLights_69
+    100012: detail_spoilerSmall_79
+    100014: hood_sport_66
+    100016: trunk_bedFlat_70
+    100018: trunk_bedFlat_71
+    100020: trunk_bedFlat_73
+    100022: trunk_default_72
+    100024: trunk_station_67
+    100026: //RootNode
+    100028: windshield_default_68
+    400000: detail_exhaust_74
+    400002: detail_fenderSquare_75
+    400004: detail_fenderSquare_76
+    400006: detail_fenderSquare_77
+    400008: detail_fenderSquare_78
+    400010: detail_policeLights_69
+    400012: detail_spoilerSmall_79
+    400014: hood_sport_66
+    400016: trunk_bedFlat_70
+    400018: trunk_bedFlat_71
+    400020: trunk_bedFlat_73
+    400022: trunk_default_72
+    400024: trunk_station_67
+    400026: //RootNode
+    400028: windshield_default_68
+    2100000: _defaultMat
+    2100002: tire
+    2100004: blueSteel
+    2100006: lightBlue
+    2100008: lightRed
+    2100010: light
+    2100012: orangeSteel
+    2100014: glass
+    2300000: detail_exhaust_74
+    2300002: detail_fenderSquare_75
+    2300004: detail_fenderSquare_76
+    2300006: detail_fenderSquare_77
+    2300008: detail_fenderSquare_78
+    2300010: detail_policeLights_69
+    2300012: detail_spoilerSmall_79
+    2300014: hood_sport_66
+    2300016: trunk_bedFlat_70
+    2300018: trunk_bedFlat_71
+    2300020: trunk_bedFlat_73
+    2300022: trunk_default_72
+    2300024: trunk_station_67
+    2300026: windshield_default_68
+    3300000: detail_exhaust_74
+    3300002: detail_fenderSquare_75
+    3300004: detail_fenderSquare_76
+    3300006: detail_fenderSquare_77
+    3300008: detail_fenderSquare_78
+    3300010: detail_policeLights_69
+    3300012: detail_spoilerSmall_79
+    3300014: hood_sport_66
+    3300016: trunk_bedFlat_70
+    3300018: trunk_bedFlat_71
+    3300020: trunk_bedFlat_73
+    3300022: trunk_default_72
+    3300024: trunk_station_67
+    3300026: windshield_default_68
+    4300000: detail_exhaust_74
+    4300002: detail_fenderSquare_75
+    4300004: detail_fenderSquare_76
+    4300006: detail_fenderSquare_77
+    4300008: detail_fenderSquare_78
+    4300010: detail_policeLights_69
+    4300012: detail_spoilerSmall_79
+    4300014: hood_sport_66
+    4300016: trunk_bedFlat_70
+    4300018: trunk_bedFlat_71
+    4300020: trunk_bedFlat_73
+    4300022: trunk_default_72
+    4300024: trunk_station_67
+    4300026: windshield_default_68
+    11400000: detail_exhaust_74
+    11400002: detail_fenderSquare_75
+    11400004: detail_fenderSquare_76
+    11400006: detail_fenderSquare_77
+    11400008: detail_fenderSquare_78
+    11400010: detail_policeLights_69
+    11400012: detail_spoilerSmall_79
+    11400014: hood_sport_66
+    11400016: trunk_bedFlat_70
+    11400018: trunk_bedFlat_71
+    11400020: trunk_bedFlat_73
+    11400022: trunk_default_72
+    11400024: trunk_station_67
+    11400026: //RootNode
+    11400028: //RootNode
+    11400030: windshield_default_68
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
