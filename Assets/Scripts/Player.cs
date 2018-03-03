@@ -62,5 +62,5 @@ public class Player : MonoBehaviour {
         {
             _boost = 0;
         }
-    }
+    }  
 }
