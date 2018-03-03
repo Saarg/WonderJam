@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.55942535, y: -58.992176, z: 42.70015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -147,6 +147,14 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
+      deadzone: 0
+      value: 0
   - name: Player 2
     controller: 0
     keyboard: 0
@@ -208,6 +216,14 @@ MonoBehaviour:
       negKeys: []
       axis: 
       buttons: 01000000
+      deadzone: 0
+      value: 0
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
       deadzone: 0
       value: 0
   - name: Player 3
@@ -273,6 +289,14 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
+      deadzone: 0
+      value: 0
   - name: Player 4
     controller: 3
     keyboard: 0
@@ -334,5 +358,13 @@ MonoBehaviour:
       negKeys: []
       axis: 
       buttons: 01000000
+      deadzone: 0
+      value: 0
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
       deadzone: 0
       value: 0
