@@ -31,12 +31,14 @@ public class StatScript : MonoBehaviour
 
     public void SetStats(GameObject car)
     {
+        if (car == null)
+            return;
         float stat;
-        //stat = car.GetComponent<Player>().speed;
-        printStat(stats[0], images[0], 50);
+        stat = car.GetComponent<WheelVehicle>().speed;
+        printStat(stats[0], images[0], stat);
 
-        //stat = car.GetComponent<Player>().acceleration;
-        printStat(stats[1], images[1], 50);
+        stat = car.GetComponent<WheelVehicle>().acceleration;
+        printStat(stats[1], images[1], stat);
 
         stat = car.GetComponent<Player>().boost;
         printStat(stats[2], images[2], stat);
