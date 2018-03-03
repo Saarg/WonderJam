@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeBonus : MonoBehaviour {
+public class Consumable : MonoBehaviour {
 
 	[SerializeField]
-	private float value;
+	private int nbUses;
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.tag);
 		if (other.CompareTag ("Player")) {
-			Player p = other.GetComponent<Player> ();
-			p.modifyLife (value);
+			nbUses--;
+			if (nbUses >= 0)
+				Destroy (gameObject,0);
 		}
-			
+
 	}
 }

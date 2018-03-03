@@ -17,18 +17,11 @@ public class Player : MonoBehaviour {
 		life = maxlife;
 		score = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 		
 	public void modifyScore( float bonus){
 		score += bonus;
 		if (score < 0)
 			score =0;
-
-		Debug.Log ("Score joueur : " + score);
 	}
 
 	public void modifyLife( float bonus){
@@ -37,7 +30,5 @@ public class Player : MonoBehaviour {
 			life = maxlife;
 		if (life < 0)
 			life =0;
-
-		Debug.Log ("Vie joueur : " + life);
 	}
 }
