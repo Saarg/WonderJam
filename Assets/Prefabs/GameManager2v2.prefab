@@ -220,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2e6cfc51def402d86e579d7641b65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
+  - {fileID: 1201695665092174, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
   playerUIPrefab: {fileID: 1210938088285204, guid: e6a978df287e54942abef7cc732e2aad,
     type: 2}
   teams:

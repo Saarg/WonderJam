@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour {
 
 	GameUI gameUI;
 
+	[SerializeField]
+	GameObject[] cars;
+
 	public GameObject playerUIPrefab;
 	public TeamData[] teams;
 
@@ -58,7 +61,7 @@ public class GameManager : MonoBehaviour {
 		Camera cam;
 		PlayerNumber pn;
 		foreach (TeamData t in teams) {
-			t.player1 = Instantiate(t.player1, t.spawn1.position, t.spawn1.rotation);
+			t.player1 = Instantiate(cars[PlayerPrefs.GetInt("Player" + (playernum+1) + "Car")], t.spawn1.position, t.spawn1.rotation);
 			t.player1UI = Instantiate(playerUIPrefab, transform).GetComponent<PlayerUI>();
 			t.player1UI.player = t.player1;
 			cam = t.player1.GetComponentInChildren<Camera>();
@@ -80,7 +83,7 @@ public class GameManager : MonoBehaviour {
 			playernum++;					
 
 			if (t.player2 != null) {
-				t.player2 = Instantiate(t.player2, t.spawn2.position, t.spawn2.rotation);
+				t.player2 = Instantiate(cars[PlayerPrefs.GetInt("Player" + (playernum+1) + "Car")], t.spawn2.position, t.spawn2.rotation);
 				t.player2UI = Instantiate(playerUIPrefab, transform).GetComponent<PlayerUI>();
 				t.player2UI.player = t.player2;
 				cam = t.player2.GetComponentInChildren<Camera>();				
