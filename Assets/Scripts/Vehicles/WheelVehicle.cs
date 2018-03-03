@@ -53,6 +53,8 @@ public class WheelVehicle : MonoBehaviour {
     [Range(0f, 100f)]    
     public float topSpeed;
 
+    public float scale;
+
     void Start ()
     {
         _rb = GetComponent<Rigidbody>();

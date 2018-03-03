@@ -17,7 +17,7 @@ public class CarSelectorScript : MonoBehaviour
     [SerializeField]
     public Button readyButton;
 
-    public String name;
+    public String key;
 
 	// Use this for initialization
 	void Start ()
@@ -67,7 +67,7 @@ public class CarSelectorScript : MonoBehaviour
         car.GetComponent<Rigidbody>().isKinematic = true;
         car.GetComponentInChildren<Camera>().enabled = false;
         car.GetComponentInChildren<CameraPlayer>().enabled = false;
-        car.transform.localScale = Vector3.one * 30;
+        car.transform.localScale = Vector3.one * 30* car.GetComponent<WheelVehicle>().scale;
         curCar = car;
         
         return car;
