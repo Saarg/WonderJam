@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 64739984128653182}
   - component: {fileID: 54750145355311724}
   - component: {fileID: 114081427735653836}
+  - component: {fileID: 114040225707441478}
   m_Layer: 0
   m_Name: mur_extr
   m_TagString: Untagged
@@ -48,6 +49,7 @@ GameObject:
   - component: {fileID: 64933295360893146}
   - component: {fileID: 54650244509759690}
   - component: {fileID: 114959533638344226}
+  - component: {fileID: 114679047673356222}
   m_Layer: 0
   m_Name: mur
   m_TagString: Untagged
@@ -70,6 +72,7 @@ GameObject:
   - component: {fileID: 64132724360564454}
   - component: {fileID: 54632910479191586}
   - component: {fileID: 114656654940296804}
+  - component: {fileID: 114500682152440466}
   m_Layer: 0
   m_Name: toit
   m_TagString: Untagged
@@ -109,6 +112,7 @@ GameObject:
   - component: {fileID: 64705880659719862}
   - component: {fileID: 54332488619190364}
   - component: {fileID: 114165435357332384}
+  - component: {fileID: 114228569265789548}
   m_Layer: 0
   m_Name: mur_extr
   m_TagString: Untagged
@@ -131,6 +135,7 @@ GameObject:
   - component: {fileID: 64835553265248310}
   - component: {fileID: 54572126475377288}
   - component: {fileID: 114564326363849110}
+  - component: {fileID: 114614017752559940}
   m_Layer: 0
   m_Name: mur
   m_TagString: Untagged
@@ -78395,6 +78400,19 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114040225707441478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007671036155644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d2cff066ff423eb077ecb58d77f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 0}
+  _lastContact: {fileID: 0}
 --- !u!114 &114065536701681602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154293,6 +154311,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 2cddb82a-1722-478d-93c0-ee4a056f03e9
+--- !u!114 &114228569265789548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1559273020816964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d2cff066ff423eb077ecb58d77f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 0}
+  _lastContact: {fileID: 0}
 --- !u!114 &114285330552170570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154591,6 +154622,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 26722118-c218-4892-bfc7-cf5384ccaace
+--- !u!114 &114500682152440466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197275145978536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d2cff066ff423eb077ecb58d77f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 0}
+  _lastContact: {fileID: 0}
 --- !u!114 &114564326363849110
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -154603,6 +154647,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: e8230ace-e7e5-4cac-aec8-ba8bbe8a3458
+--- !u!114 &114614017752559940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853979342872178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d2cff066ff423eb077ecb58d77f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 0}
+  _lastContact: {fileID: 0}
 --- !u!114 &114615684831303070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156057,6 +156114,19 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114679047673356222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160366913973270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d2cff066ff423eb077ecb58d77f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 0}
+  _lastContact: {fileID: 0}
 --- !u!114 &114716897800676710
 MonoBehaviour:
   m_ObjectHideFlags: 1
