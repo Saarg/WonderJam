@@ -128,12 +128,12 @@ namespace Trails
 
 						//Add new triangles to the mesh
 						int c = verts.Count;
-						tris.AddLast (c - 4);
-						tris.AddLast (c - 2);
-						tris.AddLast (c - 3);
-						tris.AddLast (c - 3);
-						tris.AddLast (c - 2);
 						tris.AddLast (c - 1);
+						tris.AddLast (c - 2);
+						tris.AddLast (c - 3);
+						tris.AddLast (c - 3);
+						tris.AddLast (c - 2);
+						tris.AddLast (c - 4);
 
 						//Copy lists to arrays, ready to rebuild the mesh
 						Vector3[] v = new Vector3[c];
