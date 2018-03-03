@@ -9,11 +9,11 @@ using UnityEngine;
 public class WheelVehicle : MonoBehaviour {
 
     [Header("Inputs")]
-	public string throtleInput = "Throtle";
+	public string throttleInput = "Throttle";
     public string brakeInput = "Brake";
     public string turnInput = "Horizontal";
-    public bool ignoreThrotleInput { get; set; }
-    public bool ignoreThrotleExternalInput { get; set; }
+    public bool ignoreThrottleInput { get; set; }
+    public bool ignoreThrottleExternalInput { get; set; }
     public bool ignoreTurnInput { get; set; }
     public bool ignoreTurnExternalInput { get; set; }
 
@@ -32,7 +32,7 @@ public class WheelVehicle : MonoBehaviour {
 
     [Header("External inputs")]
     public float steering = 0.0f;
-    public float throtle { get; set; }
+    public float throttle { get; set; }
 
     public bool handbreak = false;
 
@@ -56,14 +56,14 @@ public class WheelVehicle : MonoBehaviour {
 	void FixedUpdate () {
         speed = transform.InverseTransformDirection(_rb.velocity).z * 3.6f;
 
-        if (ignoreThrotleInput && !ignoreThrotleExternalInput)
+        if (ignoreThrottleInput && !ignoreThrottleExternalInput)
         {
-            throtle = Mathf.Clamp(throtle, -1, 1);
+            throttle = Mathf.Clamp(throttle, -1, 1);
         }
-        else if (!ignoreThrotleInput && throtleInput != "" && throtleInput != null)
+        else if (!ignoreThrottleInput && throttleInput != "" && throttleInput != null)
         {
-            // throtle = Input.GetAxis(throtleInput) != 0 ? Input.GetAxis(throtleInput) : Mathf.Clamp(throtle, -1, 1);
-			throtle = MultiOSControls.GetValue(throtleInput, PlayerNumber.All) - MultiOSControls.GetValue(brakeInput, PlayerNumber.All); 
+            // throttle = Input.GetAxis(throttleInput) != 0 ? Input.GetAxis(throttleInput) : Mathf.Clamp(throttle, -1, 1);
+			throttle = MultiOSControls.GetValue(throttleInput, PlayerNumber.All) - MultiOSControls.GetValue(brakeInput, PlayerNumber.All); 
         }
 
         if (ignoreTurnInput && !ignoreTurnExternalInput)
@@ -94,12 +94,12 @@ public class WheelVehicle : MonoBehaviour {
                 wheel.brakeTorque = brakeForce;
             }
         }
-        else if (Mathf.Abs(speed) < 4 || Mathf.Sign(speed) == Mathf.Sign(throtle))
+        else if (Mathf.Abs(speed) < 4 || Mathf.Sign(speed) == Mathf.Sign(throttle))
         {
             foreach (WheelCollider wheel in driveWheel)
             {
                 wheel.brakeTorque = 0;
-                wheel.motorTorque = throtle * motorTorque.Evaluate(speed) * 4;
+                wheel.motorTorque = throttle * motorTorque.Evaluate(speed) * 4;
             }
         }
         else
@@ -107,7 +107,7 @@ public class WheelVehicle : MonoBehaviour {
             foreach (WheelCollider wheel in GetComponentsInChildren<WheelCollider>())
             {
                 wheel.motorTorque = 0;
-                wheel.brakeTorque = Mathf.Abs(throtle) * brakeForce;
+                wheel.brakeTorque = Mathf.Abs(throttle) * brakeForce;
             }
         }
 
@@ -116,7 +116,7 @@ public class WheelVehicle : MonoBehaviour {
         if(gasParticle)
         {
             ParticleSystem.EmissionModule em = gasParticle.emission;
-            em.rateOverTime = handbreak ? 0 : Mathf.Lerp(em.rateOverTime.constant, Mathf.Clamp(10.0f * throtle, 5.0f, 10.0f), 0.1f);
+            em.rateOverTime = handbreak ? 0 : Mathf.Lerp(em.rateOverTime.constant, Mathf.Clamp(10.0f * throttle, 5.0f, 10.0f), 0.1f);
         }
 	}
 
