@@ -9,6 +9,7 @@ using UnityEngine;
 public class WheelVehicle : MonoBehaviour {
 
     [Header("Inputs")]
+    public PlayerNumber playerNumber = PlayerNumber.Player1;
 	public string throttleInput = "Throttle";
     public string brakeInput = "Brake";
     public string turnInput = "Horizontal";
@@ -63,7 +64,7 @@ public class WheelVehicle : MonoBehaviour {
         else if (!ignoreThrottleInput && throttleInput != "" && throttleInput != null)
         {
             // throttle = Input.GetAxis(throttleInput) != 0 ? Input.GetAxis(throttleInput) : Mathf.Clamp(throttle, -1, 1);
-			throttle = MultiOSControls.GetValue(throttleInput, PlayerNumber.All) - MultiOSControls.GetValue(brakeInput, PlayerNumber.All); 
+			throttle = MultiOSControls.GetValue(throttleInput, playerNumber) - MultiOSControls.GetValue(brakeInput, playerNumber); 
         }
 
         if (ignoreTurnInput && !ignoreTurnExternalInput)
@@ -77,7 +78,7 @@ public class WheelVehicle : MonoBehaviour {
         {
             foreach (WheelCollider wheel in turnWheel)
             {
-				wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, MultiOSControls.GetValue(turnInput, PlayerNumber.All) * steerAngle, steerSpeed);
+				wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, MultiOSControls.GetValue(turnInput, playerNumber) * steerAngle, steerSpeed);
             }
         }
 

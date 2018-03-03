@@ -5,6 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	[SerializeField]
+	TeamNumber _team;
+	public TeamNumber team { get { return _team; } }
+
+	[SerializeField]
 	float _maxlife = 100f;
 	public float maxlife { get { return _maxlife; } }
 	[SerializeField]
