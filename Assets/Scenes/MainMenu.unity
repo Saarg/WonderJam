@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005b958ed4ec89543a62ee5c11e29be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Player2Controller
+  key: Player2Controller
+  defaultChoose: 1
 --- !u!114 &9396141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,7 +823,7 @@ MonoBehaviour:
   curCar: {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
   spawnPoint: {fileID: 635256627}
   readyButton: {fileID: 1923962330}
-  name: Player1Car
+  key: Player1Car
 --- !u!1 &191923065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,7 +6782,7 @@ MonoBehaviour:
   curCar: {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
   spawnPoint: {fileID: 425232138}
   readyButton: {fileID: 1488329680}
-  name: Player2Car
+  key: Player2Car
 --- !u!114 &1792843969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7249,7 +7250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005b958ed4ec89543a62ee5c11e29be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Player1Controller
+  key: Player1Controller
+  defaultChoose: 0
 --- !u!1 &1893130928
 GameObject:
   m_ObjectHideFlags: 0
