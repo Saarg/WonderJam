@@ -10,15 +10,6 @@ public class StatScript : MonoBehaviour
     public GameObject[] stats;
     public Image[] images;
 
-    private int minWidht = 0;
-    private int maxWidht = 350;
-
-    private int minPos = 0;
-    private int maxPos = 175;
-
-    private int minStat = 1;
-    private int maxStat = 100;
-
     // Use this for initialization
     void Start ()
 	{
