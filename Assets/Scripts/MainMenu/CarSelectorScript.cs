@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CarSelectorScript : MonoBehaviour
 {
+    private static int nbReady = 0;
 
     public GameObject[] cars;
     public GameObject curCar;
@@ -14,6 +17,8 @@ public class CarSelectorScript : MonoBehaviour
     [SerializeField]
     public Button readyButton;
 
+    public String name;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -22,7 +27,8 @@ public class CarSelectorScript : MonoBehaviour
 
     // Update is called once per frame
     void Update () {
-		
+        if (curCar != null)
+		    curCar.transform.Rotate(0, 10*Time.deltaTime, 0);
 	}
 
     public void SetNextCar()
@@ -70,6 +76,14 @@ public class CarSelectorScript : MonoBehaviour
     public void PlayerReady()
     {
         readyButton.interactable = false;
+        PlayerPrefs.SetInt(name, curCarIndex);
+
+        nbReady++;
+
+        if (nbReady >=2)
+        {
+            SceneManager.LoadSceneAsync("1V1");
+        }
     }
 
 
