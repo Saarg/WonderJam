@@ -111,7 +111,7 @@ public class WheelVehicle : MonoBehaviour {
             }
         }
 
-            _rb.AddForce(transform.forward * -speed/10 * _rb.mass);
+        _rb.AddForce(transform.forward * -speed/10 * _rb.mass);
 
         if(gasParticle)
         {
