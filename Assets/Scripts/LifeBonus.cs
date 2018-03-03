@@ -11,7 +11,7 @@ public class LifeBonus : MonoBehaviour {
 		Debug.Log (other.tag);
 		if (other.CompareTag ("Player")) {
 			Player p = other.GetComponent<Player> ();
-			p.modifyLife (value);
+			p.ModifyLife (value);
 		}
 			
 	}

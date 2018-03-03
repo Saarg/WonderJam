@@ -139,6 +139,14 @@ MonoBehaviour:
       buttons: 
       deadzone: 0
       value: 0
+    - name: Boost
+      posKeys:
+      - left shift
+      negKeys: []
+      axis: 
+      buttons: 01000000
+      deadzone: 0
+      value: 0
   - name: Player 1
     controller: 0
     keyboard: 1
