@@ -23,7 +23,13 @@ public class StatScript : MonoBehaviour
     public void SetStats(GameObject car)
     {
         if (car == null)
+        {
+            Debug.Log("car null");
             return;
+        }
+
+        Debug.LogWarning("Update stat");
+
         float stat;
         stat = car.GetComponent<WheelVehicle>().speed;
         printStat(stats[0], images[0], stat);
