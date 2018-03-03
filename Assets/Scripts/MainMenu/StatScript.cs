@@ -8,9 +8,7 @@ public class StatScript : MonoBehaviour
 {
 
     public GameObject[] stats;
-
-    [SerializeField]
-    public Image image;
+    public Image[] images;
 
     private int minWidht = 0;
     private int maxWidht = 350;
@@ -21,19 +19,9 @@ public class StatScript : MonoBehaviour
     private int minStat = 1;
     private int maxStat = 100;
 
-    private float yPos;
-    private float zPos;
-
-    private float yScale;
-    private float zScale;
-
     // Use this for initialization
     void Start ()
 	{
-	    yPos = image.transform.position.y;
-	    zPos = image.transform.position.z;
-	    yScale = image.transform.localScale.y;
-	    zScale = image.transform.localScale.z;
     }
 	
 	// Update is called once per frame
@@ -43,19 +31,27 @@ public class StatScript : MonoBehaviour
 
     public void SetStats(GameObject car)
     {
+        if (car == null)
+            return;
+        float stat;
+        stat = car.GetComponent<WheelVehicle>().speed;
+        printStat(stats[0], images[0], stat);
+
+        stat = car.GetComponent<WheelVehicle>().acceleration;
+        printStat(stats[1], images[1], stat);
+
+        stat = car.GetComponent<Player>().boost;
+        printStat(stats[2], images[2], stat);
+
+        stat = 2*car.GetComponent<WheelVehicle>().steerAngle;
+        printStat(stats[3], images[3], stat);
+
+        stat = car.GetComponent<Player>().life/2;
+        printStat(stats[4], images[4], stat);
     }
 
-    private void printStat(String startName)
+    private void printStat(GameObject stat, Image image, float s)
     {
-        int stat = 50;
-
-        float curStat = (float) stat/(maxStat - minStat);
-
-        float curPos = (maxPos - minPos) * curStat;
-        float curWidth = (maxWidht - minWidht) * curStat;
-
-        image.transform.position = new Vector3(curPos, yPos, zPos);
-        image.transform.localScale = new Vector3(curWidth, yScale, zScale);
-
+        image.fillAmount = s/100.0f;
     }
 }
