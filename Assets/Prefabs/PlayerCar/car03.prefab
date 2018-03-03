@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 114045076175046808}
   - component: {fileID: 114681857862263150}
   m_Layer: 0
-  m_Name: car3
+  m_Name: car03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1966,6 +1966,8 @@ MonoBehaviour:
   speed: -0.56688774
   gasParticle: {fileID: 0}
   boostParticle: {fileID: 198215876747816558}
+  acceleration: 0
+  topSpeed: 0
 --- !u!114 &114128974549568460
 MonoBehaviour:
   m_ObjectHideFlags: 1
