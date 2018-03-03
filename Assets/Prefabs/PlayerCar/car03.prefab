@@ -1968,6 +1968,7 @@ MonoBehaviour:
   boostParticle: {fileID: 198215876747816558}
   acceleration: 0
   topSpeed: 0
+  scale: 0.75
 --- !u!114 &114128974549568460
 MonoBehaviour:
   m_ObjectHideFlags: 1
