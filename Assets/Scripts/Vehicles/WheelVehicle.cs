@@ -25,7 +25,7 @@ public class WheelVehicle : MonoBehaviour {
     public AnimationCurve motorTorque;
     public float brakeForce = 1500.0f;
     public float steerAngle = 30.0f;
-    [Range(0.001f, 1.0f)]
+    [Range(0.001f, 10.0f)]
     public float steerSpeed = 0.2f;
 
     public Transform centerOfMass;
