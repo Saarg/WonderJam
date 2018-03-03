@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
 	[SerializeField]
 	TeamNumber _team;
-	public TeamNumber team { get { return _team; } }
+	public TeamNumber team { get { return _team; } set { _team = value; } }
 
 	[SerializeField]
 	float _maxlife = 100f;
@@ -24,16 +24,6 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
 	private float score = 0;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 		
 	public void ModifyScore( float bonus){
 		score += bonus;
