@@ -167,6 +167,21 @@ MonoBehaviour:
       buttons: 06000000
       deadzone: 0
       value: 0
+    - name: Throttle
+      posKeys: []
+      negKeys: []
+      axis: 07000000
+      buttons: 06000000
+      deadzone: 0
+      value: 0
+    - name: Brake
+      posKeys:
+      - return
+      negKeys: []
+      axis: 06000000
+      buttons: 01000000
+      deadzone: 0
+      value: 0
   - name: Player 2
     controller: 0
     keyboard: 0

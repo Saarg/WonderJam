@@ -10,7 +10,7 @@ public class WheelVehicle : MonoBehaviour {
 
     [Header("Inputs")]
 	public string throtleInput = "Throtle";
-    public string breakInput = "Break";
+    public string brakeInput = "Brake";
     public string turnInput = "Horizontal";
     public bool ignoreThrotleInput { get; set; }
     public bool ignoreThrotleExternalInput { get; set; }
@@ -63,7 +63,7 @@ public class WheelVehicle : MonoBehaviour {
         else if (!ignoreThrotleInput && throtleInput != "" && throtleInput != null)
         {
             // throtle = Input.GetAxis(throtleInput) != 0 ? Input.GetAxis(throtleInput) : Mathf.Clamp(throtle, -1, 1);
-			throtle = MultiOSControls.GetValue(throtleInput, PlayerNumber.All) - MultiOSControls.GetValue(breakInput, PlayerNumber.All); 
+			throtle = MultiOSControls.GetValue(throtleInput, PlayerNumber.All) - MultiOSControls.GetValue(brakeInput, PlayerNumber.All); 
         }
 
         if (ignoreTurnInput && !ignoreTurnExternalInput)
