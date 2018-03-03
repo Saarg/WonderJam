@@ -12,7 +12,7 @@ public class ArrowSelectorScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+		statScript.SetStats(carSelectorScript.curCar);
 	}
 	
 	// Update is called once per frame
@@ -32,17 +32,20 @@ public class ArrowSelectorScript : MonoBehaviour {
 
     public void OnClick()
     {
-        switch (name)
+        if (carSelectorScript.readyButton.interactable)
         {
-            case "LeftArrow":
-                carSelectorScript.SetPreviousCar();
-                statScript.SetStats(carSelectorScript.curCar);
-                break;
-            case "RightArrow":
-                carSelectorScript.SetNextCar();
-                statScript.SetStats(carSelectorScript.curCar);
-                break;
+            switch (name)
+            {
+                case "LeftArrow":
+                    carSelectorScript.SetPreviousCar();
+                    statScript.SetStats(carSelectorScript.curCar);
+                    break;
+                case "RightArrow":
+                    carSelectorScript.SetNextCar();
+                    statScript.SetStats(carSelectorScript.curCar);
+                    break;
 
+            }
         }
 
     }
