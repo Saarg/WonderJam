@@ -114,6 +114,18 @@ public class MultiOSControls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		instance = this;
+
+		for (int j = 0; j < players.Length; j++) {
+			int playercontrollerPref = PlayerPrefs.GetInt(players[j].name + "Controller");
+			Debug.Log(players[j].name + "Controller " + playercontrollerPref);
+			if (playercontrollerPref == 0) {
+				players[j].controller = ControllerNumber.None;
+				players[j].keyboard = true;
+			} else {
+				players[j].controller = (ControllerNumber)(playercontrollerPref - 1);
+				players[j].keyboard = false;
+			}
+		}
 	}
 
 	// Update is called once per frame

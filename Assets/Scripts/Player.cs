@@ -58,5 +58,9 @@ public class Player : MonoBehaviour {
         if (col.gameObject.CompareTag("Player")) {
             _life -= col.relativeVelocity.sqrMagnitude/20;
         }
+
+		if (col.gameObject.CompareTag("Traps")) {
+            _life -= col.relativeVelocity.sqrMagnitude/100;
+        }
     }
 }
