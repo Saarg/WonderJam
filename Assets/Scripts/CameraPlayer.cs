@@ -49,7 +49,7 @@ public class CameraPlayer : MonoBehaviour {
 
         if (useCameraRotationControl)
         {
-            float input = MultiOSControls.GetValue(inputName, PlayerNumber.All);
+            float input = MultiOSControls.GetValue(inputName, wheelVehicle.playerNumber);
             Vector3 rotation = baseAttachPointRotation + new Vector3(0, input * maxAngle, 0);
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(rotation.x, rotation.y, rotation.z), cameraRotationSpeed * Time.deltaTime);
         }

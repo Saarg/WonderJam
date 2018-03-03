@@ -14,21 +14,32 @@ public class WheelVehicle : MonoBehaviour {
     public string brakeInput = "Brake";
     public string turnInput = "Horizontal";
     public string boostInput = "Boost";
+    public string jumpInput = "Jump";
+    public string resetInput = "Reset";
 
     [Header("Wheels")]
     public WheelCollider[] driveWheel;
     public WheelCollider[] turnWheel;
 
     [Header("Behaviour")]
+    // Engine
     public AnimationCurve motorTorque;
     public float brakeForce = 1500.0f;
     public float steerAngle = 30.0f;
     [Range(0.001f, 10.0f)]
     public float steerSpeed = 0.2f;
+    // Boost
     [Range(1f, 50f)]
     public float boostPowerTweaker = 15f;
     [Range(0f, 50f)]
     public float boostConsumptionTweaker = 20f;
+    //Jump
+    [Range(0.2f, 2f)]   
+    public float jumpSuspensionMagnitude = 1f;
+    private float baseSuspensionMagnitude = .2f;
+    //Reset
+    private Vector3 spawnPosition;
+    private Quaternion spawnRotation;
 
     public Transform centerOfMass;
 
@@ -57,6 +68,8 @@ public class WheelVehicle : MonoBehaviour {
     {
         _rb = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
+        spawnPosition = transform.position;
+        spawnRotation = transform.rotation;
 
         if (centerOfMass)
         {
@@ -92,6 +105,38 @@ public class WheelVehicle : MonoBehaviour {
         {
             boostParticle.Stop();
         }
+        
+        // Jump
+        if (MultiOSControls.GetValue(jumpInput, playerNumber) > .5f )
+        {
+            foreach(WheelCollider wheelCollider in driveWheel)
+            {
+                wheelCollider.suspensionDistance = jumpSuspensionMagnitude;
+            }
+            foreach (WheelCollider wheelCollider in turnWheel)
+            {
+                wheelCollider.suspensionDistance = jumpSuspensionMagnitude;
+            }
+        }
+        else
+        {
+            foreach (WheelCollider wheelCollider in driveWheel)
+            {
+                wheelCollider.suspensionDistance = baseSuspensionMagnitude;
+            }
+            foreach (WheelCollider wheelCollider in turnWheel)
+            {
+                wheelCollider.suspensionDistance = baseSuspensionMagnitude;
+            }
+        }
+
+        // Reset
+        if (MultiOSControls.GetValue(resetInput, playerNumber) > .5f)
+        {
+            transform.position = spawnPosition;
+            transform.rotation = spawnRotation;
+        }
+
 
         foreach (WheelCollider wheel in GetComponentsInChildren<WheelCollider>())
         {
