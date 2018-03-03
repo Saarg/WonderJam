@@ -11,7 +11,7 @@ public class ScoreBonus : MonoBehaviour {
 		Debug.Log (other.tag);
 		if (other.CompareTag ("Player")) {
 			Player p = other.GetComponent<Player> ();
-			p.modifyScore (value);
+			p.ModifyScore (value);
 		}
 
 	}

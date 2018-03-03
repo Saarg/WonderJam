@@ -9,13 +9,11 @@ using UnityEngine;
 public class WheelVehicle : MonoBehaviour {
 
     [Header("Inputs")]
+    public PlayerNumber playerNumber = PlayerNumber.Player1;
 	public string throttleInput = "Throttle";
     public string brakeInput = "Brake";
     public string turnInput = "Horizontal";
-    public bool ignoreThrottleInput { get; set; }
-    public bool ignoreThrottleExternalInput { get; set; }
-    public bool ignoreTurnInput { get; set; }
-    public bool ignoreTurnExternalInput { get; set; }
+    public string boostInput = "Boost";
 
     [Header("Wheels")]
     public WheelCollider[] driveWheel;
@@ -27,6 +25,10 @@ public class WheelVehicle : MonoBehaviour {
     public float steerAngle = 30.0f;
     [Range(0.001f, 10.0f)]
     public float steerSpeed = 0.2f;
+    [Range(1f, 50f)]
+    public float boostPowerTweaker = 15f;
+    [Range(0f, 50f)]
+    public float boostConsumptionTweaker = 20f;
 
     public Transform centerOfMass;
 
@@ -40,12 +42,15 @@ public class WheelVehicle : MonoBehaviour {
 
     [Header("Particles")]
     public ParticleSystem gasParticle;
+    public ParticleSystem boostParticle;
 
     private Rigidbody _rb;
+    private Player player;
 
     void Start ()
     {
         _rb = GetComponent<Rigidbody>();
+        player = GetComponent<Player>();
 
         if (centerOfMass)
         {
@@ -56,29 +61,30 @@ public class WheelVehicle : MonoBehaviour {
 	void FixedUpdate () {
         speed = transform.InverseTransformDirection(_rb.velocity).z * 3.6f;
 
-        if (ignoreThrottleInput && !ignoreThrottleExternalInput)
-        {
-            throttle = Mathf.Clamp(throttle, -1, 1);
-        }
-        else if (!ignoreThrottleInput && throttleInput != "" && throttleInput != null)
+        // Accelerate & brake
+        if (throttleInput != "" && throttleInput != null)
         {
             // throttle = Input.GetAxis(throttleInput) != 0 ? Input.GetAxis(throttleInput) : Mathf.Clamp(throttle, -1, 1);
-			throttle = MultiOSControls.GetValue(throttleInput, PlayerNumber.All) - MultiOSControls.GetValue(brakeInput, PlayerNumber.All); 
+			throttle = MultiOSControls.GetValue(throttleInput, playerNumber) - MultiOSControls.GetValue(brakeInput, playerNumber); 
         }
 
-        if (ignoreTurnInput && !ignoreTurnExternalInput)
+        // Turn
+        foreach (WheelCollider wheel in turnWheel)
         {
-            foreach (WheelCollider wheel in turnWheel)
-            {
-                wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, Mathf.Clamp(steering / 180, -1, 1) * steerAngle, steerSpeed);
-            }
+			wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, MultiOSControls.GetValue(turnInput, playerNumber) * steerAngle, steerSpeed);
         }
-        else if (!ignoreTurnInput && turnInput != "" && turnInput != null)
+
+        // Boost
+        if(MultiOSControls.GetValue(boostInput, playerNumber) > .5f && player.boost > 0 )
         {
-            foreach (WheelCollider wheel in turnWheel)
-            {
-				wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, MultiOSControls.GetValue(turnInput, PlayerNumber.All) * steerAngle, steerSpeed);
-            }
+            float deltaTime = Time.deltaTime;
+            _rb.AddForce(transform.forward * _rb.mass * boostPowerTweaker);
+            boostParticle.Emit((int)Mathf.Lerp(0, boostParticle.emission.rateOverTime.constantMax, deltaTime) );
+            player.ModifyBoost(-boostConsumptionTweaker * deltaTime);
+        }
+        else
+        {
+            boostParticle.Stop();
         }
 
         foreach (WheelCollider wheel in GetComponentsInChildren<WheelCollider>())
@@ -111,7 +117,8 @@ public class WheelVehicle : MonoBehaviour {
             }
         }
 
-        _rb.AddForce(transform.forward * -speed/10 * _rb.mass);
+
+        _rb.AddForce(- _rb.mass * transform.forward * speed/5 );
 
         if(gasParticle)
         {

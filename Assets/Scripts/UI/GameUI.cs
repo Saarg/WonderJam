@@ -1,33 +1,18 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour {
-
-	[Header("Players")]
-	[SerializeField]
-	private GameObject _player;
-	private WheelVehicle _playerVehicle;
-	private Player _playerStats;
-	public GameObject player { set { 
-		_player = value;
-		_playerVehicle = _player.GetComponent<WheelVehicle>();
-		_playerStats = _player.GetComponent<Player>();
-	} }
 	
 	private GameObject[] _teamMates;
 
 	[Header("PlayerUI")]
 	[SerializeField]
-	private Image _lifeBar;
-	[SerializeField]
-	private Text _score;
-	[SerializeField]
-	private Text _time;
-	[SerializeField]
-	private Image _speedo;
+	private PlayerUI[] _players;
+	
 
 	private GameManager _gameManager;
 
@@ -35,40 +20,45 @@ public class GameUI : MonoBehaviour {
 	void Start () {
 		_gameManager = GetComponent<GameManager>();
 
-		if (_player != null) {
-			_playerVehicle = _player.GetComponent<WheelVehicle>();
-			_playerStats = _player.GetComponent<Player>();
+		foreach (PlayerUI ui in _players) {
+			if (ui.player != null) {
+				ui.playerVehicle = ui.player.GetComponent<WheelVehicle>();
+				ui.playerStats = ui.player.GetComponent<Player>();
+			}
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (_gameManager != null) {
-			_score.text = _gameManager.score.ToString();
+		foreach (PlayerUI ui in _players) {
+			if (_gameManager != null) {
+				ui.score.text = _gameManager.scores[(int)ui.playerStats.team].score.ToString();
 
-			float timeLeft = _gameManager.timeLeft;
+				float timeLeft = _gameManager.timeLeft;
 
-			StringBuilder sb = new StringBuilder();
-			sb.Append(((int)(timeLeft/60)).ToString());
-			sb.Append(":");
-			sb.Append(((int)(timeLeft%60)).ToString());
-			_time.text = sb.ToString();
+				StringBuilder sb = new StringBuilder();
+				sb.Append(((int)(timeLeft/60)).ToString());
+				sb.Append(":");
+				sb.Append(((int)(timeLeft%60)).ToString());
+				ui.time.text = sb.ToString();
 
-			if (timeLeft < 5) {
-				_time.color = Color.red;
+				if (timeLeft < 5) {
+					ui.time.color = Color.red;
 
-				_time.transform.localScale = Vector3.one * (1f + timeLeft%1 * (5 - (int)(timeLeft)) / 20);
-			} else {
-				_time.color = Color.black;
+					ui.time.transform.localScale = Vector3.one * (1f + timeLeft%1 * (5 - (int)(timeLeft)) / 20);
+				} else {
+					ui.time.color = Color.black;
 
-				_time.transform.localScale = Vector3.one * (1f + timeLeft%1  / 20);         
+					ui.time.transform.localScale = Vector3.one * (1f + timeLeft%1  / 20);         
+				}
 			}
-		}
 
-		if (_player != null) {
-			_speedo.transform.rotation = Quaternion.Euler(0, 0, _playerVehicle.speed / 200f * -160f);
+			if (ui.player != null) {
+				ui.speedo.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Abs(ui.playerVehicle.speed) / 200f * -160f);
 
-			_lifeBar.fillAmount = Mathf.Lerp(_lifeBar.fillAmount, _playerStats.life / _playerStats.maxlife, Time.deltaTime * 2f);
+				ui.lifeBar.fillAmount = Mathf.Lerp(ui.lifeBar.fillAmount, ui.playerStats.life / ui.playerStats.maxlife, Time.deltaTime * 2f);
+				ui.boostBar.fillAmount = Mathf.Lerp(ui.boostBar.fillAmount, ui.playerStats.boost / ui.playerStats.maxBoost, Time.deltaTime * 2f);
+			}
 		}
 	}
 }
