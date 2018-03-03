@@ -47,6 +47,12 @@ public class WheelVehicle : MonoBehaviour {
     private Rigidbody _rb;
     private Player player;
 
+    [Header("ForUI only")]
+    [Range(0f, 100f)]
+    public float acceleration;
+    [Range(0f, 100f)]    
+    public float topSpeed;
+
     void Start ()
     {
         _rb = GetComponent<Rigidbody>();
