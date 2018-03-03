@@ -1996,6 +1996,8 @@ MonoBehaviour:
   inputName: Horizontal_Right_Mouse
   maxAngle: 45
   cameraRotationSpeed: 3
+  useCameraFix: 1
+  minHeight: 1
 --- !u!114 &114146426410948164
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -105,7 +105,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114081696935515290
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1620588950665498}
@@ -117,7 +117,7 @@ MonoBehaviour:
   _guid: dab63112-9f22-45de-b027-a960d5aa7a18
 --- !u!114 &114177413987650844
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
@@ -136,7 +136,7 @@ MonoBehaviour:
   _assetGuid: e79c55602df4443f793007c1d79dc797
 --- !u!114 &114231109225581022
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428044157539776}
@@ -187,7 +187,7 @@ MonoBehaviour:
   players: []
 --- !u!114 &114705034067108940
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
