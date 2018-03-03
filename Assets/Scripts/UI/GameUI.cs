@@ -10,9 +10,7 @@ public class GameUI : MonoBehaviour {
 	private GameObject[] _teamMates;
 
 	[Header("PlayerUI")]
-	[SerializeField]
-	private PlayerUI[] _players;
-	
+	public List<PlayerUI> players = new List<PlayerUI>();
 
 	private GameManager _gameManager;
 
@@ -20,7 +18,7 @@ public class GameUI : MonoBehaviour {
 	void Start () {
 		_gameManager = GetComponent<GameManager>();
 
-		foreach (PlayerUI ui in _players) {
+		foreach (PlayerUI ui in players) {
 			if (ui.player != null) {
 				ui.playerVehicle = ui.player.GetComponent<WheelVehicle>();
 				ui.playerStats = ui.player.GetComponent<Player>();
@@ -30,9 +28,9 @@ public class GameUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		foreach (PlayerUI ui in _players) {
+		foreach (PlayerUI ui in players) {
 			if (_gameManager != null) {
-				ui.score.text = _gameManager.scores[(int)ui.playerStats.team].score.ToString();
+				ui.score.text = _gameManager.teams[(int)ui.playerStats.team].score.ToString();
 
 				float timeLeft = _gameManager.timeLeft;
 
