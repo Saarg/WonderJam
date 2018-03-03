@@ -5,16 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	[SerializeField]
-	private float maxlife;
+	float _maxlife = 100f;
+	public float maxlife { get { return _maxlife; } }
 	[SerializeField]
-	private float life;
+	float _life = 100f;
+	public float life { get { return _life; } }
 	[SerializeField]
 	private float score;
 
 	// Use this for initialization
 	void Start () {
-		maxlife = 100;
-		life = maxlife;
+		_maxlife = 100;
+		_life = maxlife;
 		score = 0;
 	}
 	
@@ -32,11 +34,11 @@ public class Player : MonoBehaviour {
 	}
 
 	public void modifyLife( float bonus){
-		life += bonus;
-		if (life > maxlife)
-			life = maxlife;
+		_life += bonus;
+		if (life > _maxlife)
+			_life = _maxlife;
 		if (life < 0)
-			life =0;
+			_life =0;
 
 		Debug.Log ("Vie joueur : " + life);
 	}
