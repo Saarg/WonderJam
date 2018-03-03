@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114582458307571878}
   - component: {fileID: 114845012142100960}
   - component: {fileID: 64676414886773166}
+  - component: {fileID: 114917925958224090}
   m_Layer: 0
   m_Name: tramplin
   m_TagString: Untagged
@@ -45,6 +46,7 @@ GameObject:
   - component: {fileID: 114223581633304062}
   - component: {fileID: 64103634968613564}
   - component: {fileID: 54235805606702966}
+  - component: {fileID: 114517926989940264}
   m_Layer: 0
   m_Name: rampe
   m_TagString: Untagged
@@ -66,6 +68,8 @@ GameObject:
   - component: {fileID: 114259829499304980}
   - component: {fileID: 114701070304553818}
   - component: {fileID: 64572344850064986}
+  - component: {fileID: 114495818326736270}
+  - component: {fileID: 114279473322370606}
   m_Layer: 0
   m_Name: rampe_droite
   m_TagString: Untagged
@@ -14139,6 +14143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!114 &114279473322370606
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507899346155482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 70adddce-a492-4886-8722-e3d0352e885a
 --- !u!114 &114353329816989184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14167,6 +14183,37 @@ MonoBehaviour:
   polyEditMode: 1
   flipNormals: 0
   isOnGrid: 1
+--- !u!114 &114495818326736270
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507899346155482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1507899346155482}
+    - {fileID: 1312043232428778}
+    - {fileID: 1076763665943450}
+  _assetGuid: 952b64bac64d748c78ec81d3c529133d
+--- !u!114 &114517926989940264
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312043232428778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 44cef524-7fd4-4d45-8a1e-aa4b3341f95f
 --- !u!114 &114582458307571878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14497,3 +14544,15 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114917925958224090
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076763665943450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: e7a7410d-0d2b-464e-b2c5-a6d50f43ed74
