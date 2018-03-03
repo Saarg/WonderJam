@@ -17,13 +17,18 @@ public class CameraPlayer : MonoBehaviour {
     [Range(0, 100)]
     public float maxSpeed;
 
-    [Header("Speed depth")]
+    [Header("Camera Rotation")]
     public bool useCameraRotationControl = true;
     public string inputName = "RHorizontal";
     [Range(0, 90)]
     public float maxAngle = 45;
     [Range(1f, 10)]
     public float cameraRotationSpeed = 5f;
+
+    [Header("Camera fix")]
+    public bool useCameraFix = true;
+    [Range(0, 2)]
+    public float minHeight = 1f;
 
     // Use this for initialization
     void Start () {
@@ -44,9 +49,13 @@ public class CameraPlayer : MonoBehaviour {
 
         if (useCameraRotationControl)
         {
-            float input = MultiOSControls.GetValue(inputName, PlayerNumber.All);
+            float input = MultiOSControls.GetValue(inputName, wheelVehicle.playerNumber);
             Vector3 rotation = baseAttachPointRotation + new Vector3(0, input * maxAngle, 0);
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(rotation.x, rotation.y, rotation.z), cameraRotationSpeed * Time.deltaTime);
+        }
+        if (useCameraFix && cameraTransform.position.y < minHeight)
+        {
+            cameraTransform.position = new Vector3(cameraTransform.position.x, minHeight, cameraTransform.position.y);
         }
 
        

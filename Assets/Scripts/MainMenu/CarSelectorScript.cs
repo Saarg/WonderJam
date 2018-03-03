@@ -1,14 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CarSelectorScript : MonoBehaviour
 {
+    private static int nbReady = 0;
 
     public GameObject[] cars;
     public GameObject curCar;
     private int curCarIndex;
     public Transform spawnPoint;
+
+    [SerializeField]
+    public Button readyButton;
+
+    public String key;
 
 	// Use this for initialization
 	void Start ()
@@ -18,7 +27,8 @@ public class CarSelectorScript : MonoBehaviour
 
     // Update is called once per frame
     void Update () {
-		
+        if (curCar != null)
+		    curCar.transform.Rotate(0, 10*Time.deltaTime, 0);
 	}
 
     public void SetNextCar()
@@ -39,7 +49,6 @@ public class CarSelectorScript : MonoBehaviour
         {
             curCarIndex = cars.Length-1;
         }
-        Debug.Log("cur car : " + curCarIndex);
         Destroy(curCar);
         initCar(curCarIndex);
     }
@@ -53,10 +62,28 @@ public class CarSelectorScript : MonoBehaviour
     private GameObject initCar(int index)
     {
         GameObject car = Instantiate(cars[index], spawnPoint.position, spawnPoint.rotation);
-        car.transform.localScale = Vector3.one * 30;
+        car.GetComponent<WheelVehicle>().enabled = false;
+        car.GetComponent<Player>().enabled = false;
+        car.GetComponent<Rigidbody>().isKinematic = true;
+        car.GetComponentInChildren<Camera>().enabled = false;
+        car.GetComponentInChildren<CameraPlayer>().enabled = false;
+        car.transform.localScale = Vector3.one * 30* car.GetComponent<WheelVehicle>().scale;
         curCar = car;
         
         return car;
+    }
+
+    public void PlayerReady()
+    {
+        readyButton.interactable = false;
+        PlayerPrefs.SetInt(name, curCarIndex);
+
+        nbReady++;
+
+        if (nbReady >=2)
+        {
+            SceneManager.LoadSceneAsync("1V1");
+        }
     }
 
 

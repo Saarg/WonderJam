@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.55942535, y: -58.992176, z: 42.70015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114073436707227492
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
@@ -61,7 +61,7 @@ MonoBehaviour:
   _assetGuid: 7fb6ee37d4f4246bb88d9051ac375a14
 --- !u!114 &114093895583258012
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750680854738356}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   players:
-  - name: Player 1
+  - name: Player1
     controller: 4
     keyboard: 1
     inputs:
@@ -147,7 +147,15 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
-  - name: Player 2
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
+      deadzone: 0
+      value: 0
+  - name: Player2
     controller: 0
     keyboard: 0
     inputs:
@@ -210,7 +218,15 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
-  - name: Player 3
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
+      deadzone: 0
+      value: 0
+  - name: Player3
     controller: 2
     keyboard: 0
     inputs:
@@ -273,7 +289,15 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
-  - name: Player 4
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
+      deadzone: 0
+      value: 0
+  - name: Player4
     controller: 3
     keyboard: 0
     inputs:
@@ -334,5 +358,13 @@ MonoBehaviour:
       negKeys: []
       axis: 
       buttons: 01000000
+      deadzone: 0
+      value: 0
+    - name: Reset
+      posKeys:
+      - backspace
+      negKeys: []
+      axis: 
+      buttons: 03000000
       deadzone: 0
       value: 0

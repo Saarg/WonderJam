@@ -28,7 +28,7 @@ public class ScoreMaker : MonoBehaviour {
 
 	void OnJointBreak(float breakForce)
     {
-		if (_joint == null || (_lastContact != null && !_lastContact.CompareTag("Player")))
+		if (_lastContact == null || _joint == null || !_lastContact.CompareTag("Player"))
 			return;
 
 		AddScore(breakForce / 100, _lastContact);		
@@ -36,7 +36,8 @@ public class ScoreMaker : MonoBehaviour {
 
 	void AddScore(float impact, GameObject player) {
 		GameManager.GetInstance().AddScore((int)impact, player.GetComponent<Player>().team);
+        player.GetComponent<ScoreGainedDisplayer>().ShowScoreGained(impact);
 
-		Destroy(this);
+        Destroy(this);
 	}
 }
