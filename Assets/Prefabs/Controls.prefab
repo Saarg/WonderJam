@@ -98,6 +98,166 @@ MonoBehaviour:
       buttons: 
       deadzone: 0.2
       value: 0
+    - name: Jump
+      posKeys:
+      - space
+      negKeys: []
+      axis: 
+      buttons: 00000000
+      deadzone: 0
+      value: 0
+    - name: Pause
+      posKeys:
+      - p
+      - escape
+      negKeys: []
+      axis: 
+      buttons: 07000000
+      deadzone: 0
+      value: 0
+    - name: Throttle
+      posKeys:
+      - z
+      - w
+      negKeys: []
+      axis: 07000000
+      buttons: 
+      deadzone: 0
+      value: 0
+    - name: Brake
+      posKeys:
+      - s
+      negKeys: []
+      axis: 06000000
+      buttons: 
+      deadzone: 0
+      value: 0
+  - name: Player 1
+    controller: 0
+    keyboard: 1
+    inputs:
+    - name: Horizontal
+      posKeys:
+      - d
+      negKeys:
+      - a
+      - q
+      axis: 02000000
+      buttons: 
+      deadzone: 0.2
+      value: 0
+    - name: Vertical
+      posKeys:
+      - z
+      - w
+      negKeys:
+      - s
+      axis: 03000000
+      buttons: 
+      deadzone: 0.2
+      value: 0
+    - name: Jump
+      posKeys:
+      - space
+      negKeys: []
+      axis: 
+      buttons: 00000000
+      deadzone: 0
+      value: 0
+    - name: Pause
+      posKeys:
+      - p
+      - escape
+      negKeys: []
+      axis: 
+      buttons: 07000000
+      deadzone: 0
+      value: 0
+    - name: Throttle
+      posKeys: []
+      negKeys: []
+      axis: 07000000
+      buttons: 06000000
+      deadzone: 0
+      value: 0
+    - name: Brake
+      posKeys:
+      - return
+      negKeys: []
+      axis: 06000000
+      buttons: 
+      deadzone: 0
+      value: 0
+  - name: Player 1
+    controller: 0
+    keyboard: 1
+    inputs:
+    - name: Horizontal
+      posKeys:
+      - d
+      negKeys:
+      - a
+      - q
+      axis: 02000000
+      buttons: 
+      deadzone: 0.2
+      value: 0
+    - name: Vertical
+      posKeys:
+      - z
+      - w
+      negKeys:
+      - s
+      axis: 03000000
+      buttons: 
+      deadzone: 0.2
+      value: 0
+    - name: Jump
+      posKeys:
+      - space
+      negKeys: []
+      axis: 
+      buttons: 00000000
+      deadzone: 0
+      value: 0
+    - name: Pause
+      posKeys:
+      - p
+      - escape
+      negKeys: []
+      axis: 
+      buttons: 07000000
+      deadzone: 0
+      value: 0
+    - name: Throttle
+      posKeys: []
+      negKeys: []
+      axis: 07000000
+      buttons: 06000000
+      deadzone: 0
+      value: 0
+    - name: Brake
+      posKeys:
+      - return
+      negKeys: []
+      axis: 06000000
+      buttons: 
+      deadzone: 0
+      value: 0
+  - name: Player 1
+    controller: 0
+    keyboard: 1
+    inputs:
+    - name: Horizontal
+      posKeys:
+      - d
+      negKeys:
+      - a
+      - q
+      axis: 02000000
+      buttons: 
+      deadzone: 0.2
+      value: 0
     - name: Vertical
       posKeys:
       - z
