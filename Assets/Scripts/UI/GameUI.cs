@@ -37,7 +37,17 @@ public class GameUI : MonoBehaviour {
 				StringBuilder sb = new StringBuilder();
 				sb.Append(((int)(timeLeft/60)).ToString());
 				sb.Append(":");
-				sb.Append(((int)(timeLeft%60)).ToString());
+                if((int)(timeLeft % 60) <= 9)
+                {
+                    sb.Append("0");
+                    sb.Append(((int)(timeLeft % 60)).ToString());
+                }
+                else
+                {
+                    sb.Append(((int)(timeLeft % 60)).ToString());
+                }
+
+				
 				ui.time.text = sb.ToString();
 
 				if (timeLeft < 5) {
