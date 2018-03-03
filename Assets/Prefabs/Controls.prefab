@@ -149,7 +149,7 @@ MonoBehaviour:
       value: 0
     - name: Reset
       posKeys:
-      - enter
+      - backspace
       negKeys: []
       axis: 
       buttons: 03000000
@@ -220,7 +220,7 @@ MonoBehaviour:
       value: 0
     - name: Reset
       posKeys:
-      - enter
+      - backspace
       negKeys: []
       axis: 
       buttons: 03000000
@@ -291,7 +291,7 @@ MonoBehaviour:
       value: 0
     - name: Reset
       posKeys:
-      - enter
+      - backspace
       negKeys: []
       axis: 
       buttons: 03000000
@@ -362,7 +362,7 @@ MonoBehaviour:
       value: 0
     - name: Reset
       posKeys:
-      - enter
+      - backspace
       negKeys: []
       axis: 
       buttons: 03000000
