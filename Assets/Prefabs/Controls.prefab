@@ -132,6 +132,13 @@ MonoBehaviour:
       buttons: 
       deadzone: 0
       value: 0
+    - name: Horizontal_Right_Mouse
+      posKeys: []
+      negKeys: []
+      axis: 04000000
+      buttons: 
+      deadzone: 0
+      value: 0
   - name: Player 1
     controller: 0
     keyboard: 1
