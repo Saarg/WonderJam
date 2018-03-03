@@ -36,7 +36,8 @@ public class ScoreMaker : MonoBehaviour {
 
 	void AddScore(float impact, GameObject player) {
 		GameManager.GetInstance().AddScore((int)impact, player.GetComponent<Player>().team);
+        player.GetComponent<ScoreGainedDisplayer>().ShowScoreGained(impact);
 
-		Destroy(this);
+        Destroy(this);
 	}
 }

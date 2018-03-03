@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarSelectorScript : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class CarSelectorScript : MonoBehaviour
     public GameObject curCar;
     private int curCarIndex;
     public Transform spawnPoint;
+
+    [SerializeField]
+    public Button readyButton;
 
 	// Use this for initialization
 	void Start ()
@@ -39,7 +43,6 @@ public class CarSelectorScript : MonoBehaviour
         {
             curCarIndex = cars.Length-1;
         }
-        Debug.Log("cur car : " + curCarIndex);
         Destroy(curCar);
         initCar(curCarIndex);
     }
@@ -53,10 +56,20 @@ public class CarSelectorScript : MonoBehaviour
     private GameObject initCar(int index)
     {
         GameObject car = Instantiate(cars[index], spawnPoint.position, spawnPoint.rotation);
+        car.GetComponent<WheelVehicle>().enabled = false;
+        car.GetComponent<Player>().enabled = false;
+        car.GetComponent<Rigidbody>().isKinematic = true;
+        car.GetComponentInChildren<Camera>().enabled = false;
+        car.GetComponentInChildren<CameraPlayer>().enabled = false;
         car.transform.localScale = Vector3.one * 30;
         curCar = car;
         
         return car;
+    }
+
+    public void PlayerReady()
+    {
+        readyButton.interactable = false;
     }
 
 
