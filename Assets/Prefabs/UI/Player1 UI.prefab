@@ -142,7 +142,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &114120947928058052
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874881283794754}
@@ -154,7 +154,7 @@ MonoBehaviour:
   _guid: ba714ed9-48b5-41c9-87b3-1a93be863053
 --- !u!114 &114147802664321362
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758387687875614}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114203332840942744
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539334993047184}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114277830934727702
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210938088285204}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_DynamicPixelsPerUnit: 1
 --- !u!114 &114529303010312662
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545956430744404}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114559595003936330
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966533716071794}
@@ -360,7 +360,7 @@ MonoBehaviour:
   _guid: 66f31e77-5495-4aa5-bfee-ec8e084f9fbb
 --- !u!114 &114697720310371142
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1323161298672672}
@@ -372,7 +372,7 @@ MonoBehaviour:
   _guid: da0dcdab-b132-4970-8497-5672bb5f7248
 --- !u!114 &114721573309294694
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210938088285204}
