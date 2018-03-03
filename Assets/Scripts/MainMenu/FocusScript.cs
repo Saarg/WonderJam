@@ -39,8 +39,7 @@ public class FocusScript : MonoBehaviour
 	            step++;
 
                 // Translate text right
-	            transform.Translate(distance, 0, 0);
-                arrow.transform.Translate(-distance, 0, 0);
+	            text.transform.Translate(distance, 0, 0);
 
                 // Set ocacity arrow
 	            float newOpcaity = maxOpacity * (float) step / maxStep/ 255.0f;
@@ -64,11 +63,41 @@ public class FocusScript : MonoBehaviour
     public void PointerExit()
     {
         isTrigged = false;
-        transform.Translate(-step*distance, 0, 0);
-        arrow.transform.Translate(step*distance, 0, 0);
+        text.transform.Translate(-step*distance, 0, 0);
         arrow.color = new Color(arrow.color.r, arrow.color.g, arrow.color.b, 0.0f);
         text.color = whiteColor;
         step = 0;
+    }
+
+    public void OnClick()
+    {
+        switch (name)
+        {
+            case "Play":
+                onPlay();
+                break;
+            case "Options":
+                onOptions();
+                break;
+            case "Quit":
+                onQuit();
+                break;
+        }
+    }
+
+    private void onPlay()
+    {
+
+    }
+
+    private void onOptions()
+    {
+
+    }
+
+    private void onQuit()
+    {
+        Application.Quit();
     }
 
 }
