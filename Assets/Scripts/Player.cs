@@ -53,4 +53,10 @@ public class Player : MonoBehaviour {
             _boost = 0;
         }
     }
+
+	void OnCollisionEnter(Collision col) {
+        if (col.gameObject.CompareTag("Player")) {
+            _life -= col.relativeVelocity.sqrMagnitude/20;
+        }
+    }
 }
