@@ -8,6 +8,7 @@ public class ArrowSelectorScript : MonoBehaviour {
     private Image image;
 
     public CarSelectorScript carSelectorScript;
+    public StatScript statScript;
 
     // Use this for initialization
     void Start () {
@@ -29,20 +30,17 @@ public class ArrowSelectorScript : MonoBehaviour {
         image.color = Color.white;
     }
 
-    public void OnSelect()
-    {
-        image.color = new Color32(200, 200, 200, 255);
-    }
-
     public void OnClick()
     {
         switch (name)
         {
-            case "ArrowLeft":
+            case "LeftArrow":
                 carSelectorScript.SetPreviousCar();
+                statScript.SetStats(carSelectorScript.curCar);
                 break;
-            case "ArrowRight":
+            case "RightArrow":
                 carSelectorScript.SetNextCar();
+                statScript.SetStats(carSelectorScript.curCar);
                 break;
 
         }

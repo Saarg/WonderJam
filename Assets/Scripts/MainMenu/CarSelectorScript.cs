@@ -13,13 +13,11 @@ public class CarSelectorScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    curCar = Instantiate(cars[0], spawnPoint.position, spawnPoint.rotation);
-	    curCar.transform.localScale = Vector3.one*30;
+	    initCar(0);
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -31,7 +29,7 @@ public class CarSelectorScript : MonoBehaviour
             curCarIndex = 0;
         }
         Destroy(curCar);
-        curCar = Instantiate(cars[curCarIndex], spawnPoint.position, spawnPoint.rotation);
+        initCar(curCarIndex);
     }
 
     public void SetPreviousCar()
@@ -43,14 +41,21 @@ public class CarSelectorScript : MonoBehaviour
         }
         Debug.Log("cur car : " + curCarIndex);
         Destroy(curCar);
-        curCar = Instantiate(cars[curCarIndex], spawnPoint.position, spawnPoint.rotation);
+        initCar(curCarIndex);
     }
 
     public GameObject GetCurrentCar()
     {
         Destroy(curCar);
-        GameObject car = Instantiate(cars[0], spawnPoint.position, spawnPoint.rotation);
+        return initCar(curCarIndex);
+    }
+
+    private GameObject initCar(int index)
+    {
+        GameObject car = Instantiate(cars[index], spawnPoint.position, spawnPoint.rotation);
+        car.transform.localScale = Vector3.one * 30;
         curCar = car;
+        
         return car;
     }
 
