@@ -28,8 +28,6 @@ public class StatScript : MonoBehaviour
             return;
         }
 
-        Debug.LogWarning("Update stat");
-
         float stat;
         stat = car.GetComponent<WheelVehicle>().speed;
         printStat(stats[0], images[0], stat);
