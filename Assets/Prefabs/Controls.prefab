@@ -85,7 +85,7 @@ MonoBehaviour:
   locked: 0
   players:
   - name: Player 1
-    controller: 0
+    controller: 4
     keyboard: 1
     inputs:
     - name: Horizontal
@@ -147,9 +147,9 @@ MonoBehaviour:
       buttons: 01000000
       deadzone: 0
       value: 0
-  - name: Player 1
+  - name: Player 2
     controller: 0
-    keyboard: 1
+    keyboard: 0
     inputs:
     - name: Horizontal
       posKeys:
@@ -158,16 +158,6 @@ MonoBehaviour:
       - a
       - q
       axis: 02000000
-      buttons: 
-      deadzone: 0.2
-      value: 0
-    - name: Vertical
-      posKeys:
-      - z
-      - w
-      negKeys:
-      - s
-      axis: 03000000
       buttons: 
       deadzone: 0.2
       value: 0
@@ -189,23 +179,40 @@ MonoBehaviour:
       deadzone: 0
       value: 0
     - name: Throttle
-      posKeys: []
+      posKeys:
+      - z
+      - w
       negKeys: []
       axis: 07000000
-      buttons: 06000000
+      buttons: 
       deadzone: 0
       value: 0
     - name: Brake
       posKeys:
-      - return
+      - s
       negKeys: []
       axis: 06000000
       buttons: 
       deadzone: 0
       value: 0
-  - name: Player 1
-    controller: 0
-    keyboard: 1
+    - name: Horizontal_Right_Mouse
+      posKeys: []
+      negKeys: []
+      axis: 04000000
+      buttons: 
+      deadzone: 0
+      value: 0
+    - name: Boost
+      posKeys:
+      - left shift
+      negKeys: []
+      axis: 
+      buttons: 01000000
+      deadzone: 0
+      value: 0
+  - name: Player 3
+    controller: 2
+    keyboard: 0
     inputs:
     - name: Horizontal
       posKeys:
@@ -214,16 +221,6 @@ MonoBehaviour:
       - a
       - q
       axis: 02000000
-      buttons: 
-      deadzone: 0.2
-      value: 0
-    - name: Vertical
-      posKeys:
-      - z
-      - w
-      negKeys:
-      - s
-      axis: 03000000
       buttons: 
       deadzone: 0.2
       value: 0
@@ -245,23 +242,40 @@ MonoBehaviour:
       deadzone: 0
       value: 0
     - name: Throttle
-      posKeys: []
+      posKeys:
+      - z
+      - w
       negKeys: []
       axis: 07000000
-      buttons: 06000000
+      buttons: 
       deadzone: 0
       value: 0
     - name: Brake
       posKeys:
-      - return
+      - s
       negKeys: []
       axis: 06000000
       buttons: 
       deadzone: 0
       value: 0
-  - name: Player 1
-    controller: 0
-    keyboard: 1
+    - name: Horizontal_Right_Mouse
+      posKeys: []
+      negKeys: []
+      axis: 04000000
+      buttons: 
+      deadzone: 0
+      value: 0
+    - name: Boost
+      posKeys:
+      - left shift
+      negKeys: []
+      axis: 
+      buttons: 01000000
+      deadzone: 0
+      value: 0
+  - name: Player 4
+    controller: 3
+    keyboard: 0
     inputs:
     - name: Horizontal
       posKeys:
@@ -270,16 +284,6 @@ MonoBehaviour:
       - a
       - q
       axis: 02000000
-      buttons: 
-      deadzone: 0.2
-      value: 0
-    - name: Vertical
-      posKeys:
-      - z
-      - w
-      negKeys:
-      - s
-      axis: 03000000
       buttons: 
       deadzone: 0.2
       value: 0
@@ -301,17 +305,34 @@ MonoBehaviour:
       deadzone: 0
       value: 0
     - name: Throttle
-      posKeys: []
+      posKeys:
+      - z
+      - w
       negKeys: []
       axis: 07000000
-      buttons: 06000000
+      buttons: 
       deadzone: 0
       value: 0
     - name: Brake
       posKeys:
-      - return
+      - s
       negKeys: []
       axis: 06000000
       buttons: 
+      deadzone: 0
+      value: 0
+    - name: Horizontal_Right_Mouse
+      posKeys: []
+      negKeys: []
+      axis: 04000000
+      buttons: 
+      deadzone: 0
+      value: 0
+    - name: Boost
+      posKeys:
+      - left shift
+      negKeys: []
+      axis: 
+      buttons: 01000000
       deadzone: 0
       value: 0

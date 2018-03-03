@@ -49373,6 +49373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c241727a8fc83048b56bdd0b450f8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 0
   throttleInput: Throttle
   brakeInput: Brake
   turnInput: Horizontal
@@ -49430,6 +49431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c84e579922340e4e936913f5cf572e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _team: 0
   _maxlife: 100
   _life: 100
   _maxBoost: 100

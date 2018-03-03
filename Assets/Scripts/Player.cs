@@ -5,10 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	[SerializeField]
+	TeamNumber _team;
+	public TeamNumber team { get { return _team; } }
+
+	[SerializeField]
 	float _maxlife = 100f;
 	public float maxlife { get { return _maxlife; } }
-	[SerializeField]
-	float _life = 100f;
+    [SerializeField]
+    float _life = 100f;
 	public float life { get { return _life; } }
 
     [SerializeField]
@@ -19,14 +23,11 @@ public class Player : MonoBehaviour {
     public float boost { get { return _boost; } }
 
     [SerializeField]
-	private float score;
+	private float score = 0;
 
 	// Use this for initialization
 	void Start () {
-		_maxlife = 100;
-		_life = maxlife;
-        _boost = 0;
-        score = 0;
+		
 	}
 	
 	// Update is called once per frame
