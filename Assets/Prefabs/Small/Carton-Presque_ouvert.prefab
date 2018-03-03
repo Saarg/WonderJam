@@ -32,7 +32,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4585573389486072
 Transform:
@@ -925,7 +925,7 @@ MonoBehaviour:
   _entityType: 0
 --- !u!114 &114372674459387472
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587676339098348}
@@ -937,7 +937,7 @@ MonoBehaviour:
   _guid: 3212bcc9-ca31-4f8a-9d5a-cb57b3fcb43a
 --- !u!114 &114588215680946714
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587676339098348}
