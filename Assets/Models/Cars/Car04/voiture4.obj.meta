@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 08a820359c7e9c34397715127ba3509f
-timeCreated: 1520095888
+timeCreated: 1520141304
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -94,24 +94,6 @@ ModelImporter:
     4300026: windshield_truck_3
     4300028: wing_endLong_5
     4300030: wing_endLong_6
-    11400000: detail_bumper_15
-    11400002: detail_fender_11
-    11400004: detail_fender_12
-    11400006: detail_fender_13
-    11400008: detail_fender_14
-    11400010: detail_mirror_17
-    11400012: detail_mirror_18
-    11400014: detail_rollbar_7
-    11400016: detail_rollbar_8
-    11400018: detail_sirenRound_10
-    11400020: engine_plane_4
-    11400022: hood_truck_0
-    11400024: trunk_bed_2
-    11400026: //RootNode
-    11400028: //RootNode
-    11400030: windshield_truck_3
-    11400032: wing_endLong_5
-    11400034: wing_endLong_6
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0d37563859565444f92c88022f5151a9
-timeCreated: 1520096023
+timeCreated: 1520141305
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -106,26 +106,6 @@ ModelImporter:
     4300030: trunk_bed_23
     4300032: trunk_station_22
     4300034: windshield_default_20
-    11400000: debris_bricks_31
-    11400002: detail_bullbar_27
-    11400004: detail_exhaust_34
-    11400006: detail_exhaust_35
-    11400008: detail_fenderRounded_37
-    11400010: detail_fenderRounded_38
-    11400012: detail_fenderRounded_39
-    11400014: detail_fenderRounded_40
-    11400016: detail_mirror_25
-    11400018: detail_mirror_26
-    11400020: detail_rollbar_24
-    11400022: engine_intake_42
-    11400024: hood_sleek_19
-    11400026: planks_wall_28
-    11400028: planks_wall_29
-    11400030: trunk_bed_23
-    11400032: trunk_station_22
-    11400034: //RootNode
-    11400036: //RootNode
-    11400038: windshield_default_20
   externalObjects: {}
   materials:
     importMaterials: 1
