@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject playerUIPrefab;
 	public TeamData[] teams;
 
+	public GameObject countdownUIPrefab;	
+	public GameObject endOfGameUIPrefab;	
+
 	[SerializeField]
 	private float _gameTime = 600f;
 	public float curTime { get; internal set; } = 0;
@@ -49,6 +52,11 @@ public class GameManager : MonoBehaviour {
 		if (gameManager != null) {
 			Debug.LogError("Multiple gameManagers in scene");
 			Destroy(gameObject);
+		}
+
+		if (countdownUIPrefab != null) {
+			Instantiate(countdownUIPrefab, transform);
+			_gameTime += 5;
 		}
 
 		gameManager = this;
@@ -112,6 +120,15 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		curTime = Time.realtimeSinceStartup - _startTime;
+
+		if (curTime >= _gameTime) {
+			if (endOfGameUIPrefab != null && teams[0].player1UI != null) {
+				foreach (TeamData td in teams)
+					Destroy(teams[0].player1UI.gameObject);
+
+				Instantiate(endOfGameUIPrefab, transform);
+			}
+		}
 	}
 
 	public void AddScore(int s, TeamNumber team) {
