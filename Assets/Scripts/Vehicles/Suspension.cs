@@ -41,7 +41,7 @@ public class Suspension : MonoBehaviour {
             _wheelCollider.GetWorldPose(out pos, out quat);
 
             _wheelModel.transform.rotation = quat;
-            _wheelModel.transform.Rotate(Vector3.up * -90);
+           // _wheelModel.transform.Rotate(Vector3.up * -90);
             _wheelModel.transform.position = pos;
 
             WheelHit wheelHit;
