@@ -30,17 +30,22 @@ public class CameraPlayer : MonoBehaviour {
     [Range(0, 2)]
     public float minHeight = 1f;
 
+    private Transform target;
+
     // Use this for initialization
     void Start () {
         wheelVehicle = GetComponentInParent<WheelVehicle>();
         cameraTransform = GetComponentInChildren<Camera>().transform;
         baseCameraPosition = cameraTransform.localPosition;
         baseAttachPointRotation = transform.localEulerAngles;
+
+        target = transform.parent;
+        transform.SetParent(transform.parent.parent);
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        /*
         if (useSpeedDepth)
         {
             CurrentDistance = MaxDistance * (wheelVehicle.speed / maxSpeed);
@@ -56,8 +61,22 @@ public class CameraPlayer : MonoBehaviour {
         if (useCameraFix && cameraTransform.position.y < minHeight)
         {
             cameraTransform.position = new Vector3(cameraTransform.position.x, minHeight, cameraTransform.position.y);
+        }*/
+    }
+
+    void LateUpdate() {
+        if (useSpeedDepth)
+        {
+            CurrentDistance = MaxDistance * (wheelVehicle.speed / maxSpeed);
+        }
+        
+        float input = 0;
+        if (useCameraRotationControl)
+        {
+            input = MultiOSControls.GetValue(inputName, wheelVehicle.playerNumber);           
         }
 
-       
+        transform.LookAt(target.position + input * target.right);
+        transform.position = Vector3.Lerp(transform.position, target.position - target.forward * (5+CurrentDistance) + target.up * 1, Time.deltaTime * 3);
     }
 }
