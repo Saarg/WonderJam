@@ -8,8 +8,15 @@ public class ScoreGainedDisplayer : MonoBehaviour {
     public Transform spawnTransform;
     public ScoreGainedCanvas scoreGainedCanvasPrefab;
 
+    [Header("Sounds")]
+    public AudioSource AudioSource;
+    public AudioClip[] ExplosionClips;
+
+
     // Use this for initialization
     void Start () {
+        if (AudioSource == null) { }
+            // TODO
 		
 	}
 	
@@ -26,5 +33,13 @@ public class ScoreGainedDisplayer : MonoBehaviour {
         scoreGainedCanvas.GetComponentInChildren<Text>().text = textToShow;
         scoreGainedCanvas.transform.localPosition = Vector3.zero;
         scoreGainedCanvas.transform.localRotation = Quaternion.identity;
+        playSoundOnCollision();
+    }
+
+    private void playSoundOnCollision()
+    {
+        int sound = Random.Range(0, ExplosionClips.Length);
+        AudioSource.PlayOneShot(ExplosionClips[sound], 1);
+
     }
 }
