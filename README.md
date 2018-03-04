@@ -1,4 +1,4 @@
-# Wondejam 2018
+# Wonderjam 2018
 Order and chaos
 
 ## themes
