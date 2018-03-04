@@ -24,4 +24,5 @@ public class PlayerUI : MonoBehaviour {
 	public Text score;
 	public Text time;
 	public Image speedo;
+
 }

@@ -47,6 +47,15 @@ ModelImporter:
     4300008: hood_short_29
     4300010: trunk_truck_26
     4300012: windshield_square_27
+    11400000: detail_exhaustVertical_31
+    11400002: detail_exhaustVertical_32
+    11400004: detail_sirenRound_30
+    11400006: detail_spoilerSmall_33
+    11400008: hood_short_29
+    11400010: //RootNode
+    11400012: //RootNode
+    11400014: trunk_truck_26
+    11400016: windshield_square_27
   externalObjects: {}
   materials:
     importMaterials: 1

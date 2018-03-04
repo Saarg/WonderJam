@@ -64,6 +64,18 @@ ModelImporter:
     4300014: wheel_truck_7
     4300016: wheel_truck_8
     4300018: windshield_jeep_2
+    11400000: detail_engine_10
+    11400002: detail_exhaust_9
+    11400004: detail_spoiler_11
+    11400006: hood_truck_3
+    11400008: trunk_default_0
+    11400010: //RootNode
+    11400012: //RootNode
+    11400014: wheel_truck_5
+    11400016: wheel_truck_6
+    11400018: wheel_truck_7
+    11400020: wheel_truck_8
+    11400022: windshield_jeep_2
   externalObjects: {}
   materials:
     importMaterials: 1

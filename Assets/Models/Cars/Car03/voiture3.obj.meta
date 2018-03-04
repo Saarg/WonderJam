@@ -85,6 +85,22 @@ ModelImporter:
     4300022: trunk_default_72
     4300024: trunk_station_67
     4300026: windshield_default_68
+    11400000: detail_exhaust_74
+    11400002: detail_fenderSquare_75
+    11400004: detail_fenderSquare_76
+    11400006: detail_fenderSquare_77
+    11400008: detail_fenderSquare_78
+    11400010: detail_policeLights_69
+    11400012: detail_spoilerSmall_79
+    11400014: hood_sport_66
+    11400016: trunk_bedFlat_70
+    11400018: trunk_bedFlat_71
+    11400020: trunk_bedFlat_73
+    11400022: trunk_default_72
+    11400024: trunk_station_67
+    11400026: //RootNode
+    11400028: //RootNode
+    11400030: windshield_default_68
   externalObjects: {}
   materials:
     importMaterials: 1
