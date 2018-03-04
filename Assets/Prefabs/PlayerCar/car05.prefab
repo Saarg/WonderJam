@@ -2625,6 +2625,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   AudioSource: {fileID: 82706062148878824}
   crashSound: {fileID: 8300000, guid: b2634848a0b5de0448bd88b50953c0ca, type: 3}
+  blownSound: {fileID: 8300000, guid: be48a558c867d7c499f1909c60ec9a81, type: 3}
 --- !u!114 &114171246130412808
 MonoBehaviour:
   m_ObjectHideFlags: 1
