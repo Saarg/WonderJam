@@ -19,7 +19,7 @@ public class CountDown : MonoBehaviour {
 	void Update () {
 		countText.text = Mathf.FloorToInt(5 - (Time.realtimeSinceStartup - startTime)).ToString();
 
-		if (Time.realtimeSinceStartup - startTime >= 5f) {
+		if (Time.realtimeSinceStartup - startTime >= 4f) {
 			Time.timeScale = 1f;
 			
 			Destroy(gameObject);
