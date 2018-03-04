@@ -274,11 +274,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2e6cfc51def402d86e579d7641b65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scores: []
+  cars: []
+  playerUIPrefab: {fileID: 0}
+  teams: []
   _gameTime: 600
 --- !u!114 &114042314959856250
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027844377055584}
@@ -395,7 +397,7 @@ MonoBehaviour:
   _guid: 36990cae-3a91-4608-9382-ddcfc5c87130
 --- !u!114 &114309892540957862
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027844377055584}
@@ -779,9 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdf7c33e8a1e47ee8fffaa34687df44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _players:
-  - {fileID: 0}
-  - {fileID: 0}
+  players: []
 --- !u!114 &114902296407084062
 MonoBehaviour:
   m_ObjectHideFlags: 1

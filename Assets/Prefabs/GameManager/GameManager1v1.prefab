@@ -117,7 +117,7 @@ MonoBehaviour:
   _guid: dab63112-9f22-45de-b027-a960d5aa7a18
 --- !u!114 &114177413987650844
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
@@ -194,7 +194,7 @@ MonoBehaviour:
   players: []
 --- !u!114 &114705034067108940
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
