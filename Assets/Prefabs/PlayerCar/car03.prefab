@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 114378564427019228}
   m_Layer: 0
   m_Name: car03
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2064,6 +2064,7 @@ MonoBehaviour:
   turnInput: Horizontal
   boostInput: Boost
   jumpInput: Jump
+  resetInput: Reset
   driveWheel:
   - {fileID: 146681860051373718}
   - {fileID: 146180532367388052}

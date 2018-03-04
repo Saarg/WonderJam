@@ -48,4 +48,17 @@ public class DoorTriger : MonoBehaviour {
 			}
 		}
 	}
+
+	void OnTriggerExit(Collider col) {
+		if (detectedTag == "" || col.tag == detectedTag) {
+			foreach (DoorTrigerHingesData door in doors)
+			{
+				JointSpring s = door.joint.spring;
+
+				s.targetPosition = 0;
+
+				door.joint.spring = s;
+			}
+		}
+	}
 }
