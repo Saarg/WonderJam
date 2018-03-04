@@ -53,13 +53,28 @@ public class Player : MonoBehaviour {
     }
 
 	void OnCollisionEnter(Collision col) {
-        if (col.gameObject.CompareTag("Player")) {
-            _life -= col.relativeVelocity.sqrMagnitude/20;
+        /*if (col.gameObject.GetComponent<Rigidbody>() != null)
+        {
+            float otherMass = col.gameObject.GetComponent<Rigidbody>().mass;
+            float myMass = GetComponent<Rigidbody>().mass;
+
+            if (col.gameObject.CompareTag("Player"))
+            {
+                _life -= (myMass / myMass + otherMass) * col.relativeVelocity.sqrMagnitude / 200;
+            }
+        }*/
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+            _life -= col.relativeVelocity.sqrMagnitude / 20;
         }
 
-		if (col.gameObject.CompareTag("Traps")) {
-            _life -= col.relativeVelocity.sqrMagnitude/100;
+
+        if (col.gameObject.CompareTag("Traps"))
+        {
+            _life -= col.relativeVelocity.sqrMagnitude / 100;
         }
+       
     }
 
     void Update()
