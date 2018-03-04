@@ -2188,7 +2188,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1567702858198140}
   serializedVersion: 2
-  m_Mass: 750
+  m_Mass: 2000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2374,11 +2374,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _team: 0
-  _maxlife: 100
-  _life: 100
-  _maxBoost: 100
-  _boost: 100
-  score: 0
+  _maxlife: 120
+  _life: 120
+  _maxBoost: 190
+  _boost: 190
 --- !u!114 &114171246130412808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2949,7 +2948,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   brakeForce: 1500
-  steerAngle: 30
+  steerAngle: 22.5
   steerSpeed: 1
   boostPowerTweaker: 5
   boostConsumptionTweaker: 20
@@ -2960,8 +2959,8 @@ MonoBehaviour:
   speed: 0
   gasParticle: {fileID: 0}
   boostParticle: {fileID: 198126561345854646}
-  acceleration: 0
-  topSpeed: 0
+  acceleration: 166
+  topSpeed: 175
   scale: 1
 --- !u!114 &114657830249612444
 MonoBehaviour:

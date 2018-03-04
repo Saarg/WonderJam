@@ -29,7 +29,7 @@ public class StatScript : MonoBehaviour
         }
 
         float stat;
-        stat = car.GetComponent<WheelVehicle>().speed;
+        stat = car.GetComponent<WheelVehicle>().topSpeed;
         printStat(stats[0], images[0], stat);
 
         stat = car.GetComponent<WheelVehicle>().acceleration;
@@ -38,15 +38,15 @@ public class StatScript : MonoBehaviour
         stat = car.GetComponent<Player>().boost;
         printStat(stats[2], images[2], stat);
 
-        stat = 2*car.GetComponent<WheelVehicle>().steerAngle;
+        stat = 4*car.GetComponent<WheelVehicle>().steerAngle;
         printStat(stats[3], images[3], stat);
 
-        stat = car.GetComponent<Player>().life/2;
+        stat = car.GetComponent<Player>().life;
         printStat(stats[4], images[4], stat);
     }
 
     private void printStat(GameObject stat, Image image, float s)
     {
-        image.fillAmount = s/100.0f;
+        image.fillAmount = s/200.0f;
     }
 }

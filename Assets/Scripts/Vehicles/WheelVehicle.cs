@@ -25,6 +25,7 @@ public class WheelVehicle : MonoBehaviour {
     // Engine
     public AnimationCurve motorTorque;
     public float brakeForce = 1500.0f;
+    [Range(0f, 50.0f)]
     public float steerAngle = 30.0f;
     [Range(0.001f, 10.0f)]
     public float steerSpeed = 0.2f;
@@ -59,10 +60,10 @@ public class WheelVehicle : MonoBehaviour {
     private Player player;
 
     [Header("ForUI only")]
-    [Range(0f, 100f)]
-    public float acceleration;
-    [Range(0f, 100f)]    
-    public float topSpeed;
+    [Range(0f, 200f)]
+    public float acceleration = 100f;
+    [Range(0f, 200f)]    
+    public float topSpeed = 100f;
 
     public float scale;
 
