@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour {
 			cam = t.player1.GetComponentInChildren<Camera>();
 			t.player1UI.GetComponent<Canvas>().worldCamera = cam;
 			t.player1.GetComponent<Player>().team = (TeamNumber)(teamnum);
+		    t.player1.GetComponent<Player>().animator = t.player1UI.GetComponent<Animator>();
 			pn = (PlayerNumber)(playernum);
 			t.player1.GetComponent<WheelVehicle>().playerNumber = pn;
 
@@ -89,7 +90,8 @@ public class GameManager : MonoBehaviour {
 				cam = t.player2.GetComponentInChildren<Camera>();				
 				t.player2UI.GetComponent<Canvas>().worldCamera = t.player2.GetComponentInChildren<Camera>();			
 				t.player2.GetComponent<Player>().team = (TeamNumber)(teamnum);
-				pn = (PlayerNumber)(playernum);
+			    t.player2.GetComponent<Player>().animator = t.player2UI.GetComponent<Animator>();
+                pn = (PlayerNumber)(playernum);
 				t.player2.GetComponent<WheelVehicle>().playerNumber = pn;
 
 				if (pn == PlayerNumber.Player1)

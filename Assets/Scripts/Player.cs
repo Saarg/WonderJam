@@ -24,6 +24,8 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
 	private float score = 0;
+
+    public Animator animator;
 		
 	public void ModifyScore( float bonus){
 		score += bonus;
@@ -62,5 +64,31 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.CompareTag("Traps")) {
             _life -= col.relativeVelocity.sqrMagnitude/100;
         }
+    }
+
+    void Update()
+    {
+        if (_life <= 95)
+        {
+            animator.SetTrigger("Blown");
+            explosion();
+            
+            enabled = false;
+            GetComponent<WheelVehicle>().enabled = false;
+        }
+    }
+
+    private void explosion()
+    {
+        Transform body = transform.Find("body");
+        foreach (Transform c in body)
+        {
+            c.gameObject.AddComponent<Rigidbody>();
+            c.gameObject.AddComponent<MeshCollider>();
+
+            c.gameObject.GetComponent<MeshCollider>().convex = true;
+            c.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position - Vector3.up, 10);
+        }
+
     }
 }
