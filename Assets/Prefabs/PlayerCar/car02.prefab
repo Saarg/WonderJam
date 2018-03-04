@@ -3423,6 +3423,8 @@ MonoBehaviour:
   _life: 140
   _maxBoost: 155
   _boost: 155
+  score: 0
+  animator: {fileID: 0}
 --- !u!114 &114318936031110298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3954,7 +3956,9 @@ MonoBehaviour:
   steerSpeed: 1
   boostPowerTweaker: 5
   boostConsumptionTweaker: 20
-  jumpSuspensionMagnitude: 1
+  jumpCD: 1
+  jumpMult: 4
+  jumpSuspensionMagnitude: 0.5
   centerOfMass: {fileID: 4312517851472650}
   steering: 0
   handbreak: 0

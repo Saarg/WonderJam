@@ -1416,7 +1416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: Player 2
 --- !u!222 &108579871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13156,7 +13156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005b958ed4ec89543a62ee5c11e29be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 1
+  def: 2
   key: Player3Controller
 --- !u!114 &1299494912
 MonoBehaviour:
@@ -19924,6 +19924,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   def: 0
   key: Player1Controller
+--- !u!1001 &1884295396
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498796014899116, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268718775429250, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268718775429250, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763249358130898, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.34794533
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763249358130898, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.5900006
+      objectReference: {fileID: 0}
+    - target: {fileID: 65599464256961646, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 65599464256961646, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 65599464256961646, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 65599464256961646, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 3.53
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1886401007
 GameObject:
   m_ObjectHideFlags: 0
@@ -22875,7 +22953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005b958ed4ec89543a62ee5c11e29be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 2
+  def: 1
   key: Player2Controller
 --- !u!114 &2145913370
 MonoBehaviour:

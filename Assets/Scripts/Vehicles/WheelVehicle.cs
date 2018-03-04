@@ -35,6 +35,11 @@ public class WheelVehicle : MonoBehaviour {
     [Range(0f, 50f)]
     public float boostConsumptionTweaker = 20f;
     //Jump
+    float lastJump = 0;
+    [SerializeField]
+    float jumpCD = 1f;
+    [SerializeField]
+    float jumpMult = 5f;
     [Range(0.2f, 2f)]   
     public float jumpSuspensionMagnitude = 1f;
     private float baseSuspensionMagnitude = .2f;
@@ -110,8 +115,14 @@ public class WheelVehicle : MonoBehaviour {
         }
         
         // Jump
-        if (MultiOSControls.GetValue(jumpInput, playerNumber) > .5f )
+        if (MultiOSControls.GetValue(jumpInput, playerNumber) > .5f && Time.realtimeSinceStartup - lastJump > jumpCD && driveWheel[0].suspensionDistance == baseSuspensionMagnitude)
         {
+            lastJump = Time.realtimeSinceStartup;
+
+            _rb.AddForce(transform.forward * _rb.mass * jumpMult + transform.up * _rb.mass * 2 *jumpMult, ForceMode.Impulse);
+        }
+
+        if (MultiOSControls.GetValue(jumpInput, playerNumber) > .5f) {
             foreach(WheelCollider wheelCollider in driveWheel)
             {
                 wheelCollider.suspensionDistance = jumpSuspensionMagnitude;

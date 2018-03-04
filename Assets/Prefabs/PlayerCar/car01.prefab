@@ -808,7 +808,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775911664165000}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.12, y: 0.3387683, z: -10.46}
+  m_LocalPosition: {x: -7.12, y: 2, z: -10.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4676040607686788}
@@ -1329,8 +1329,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.999757, y: 0.8346536, z: 2.7552745}
-  m_Center: {x: 0.08893713, y: 0.40121305, z: 0.14821553}
+  m_Size: {x: 0.95, y: 0.77, z: 2.7552745}
+  m_Center: {x: 0, y: 0.40121305, z: 0.01}
 --- !u!81 &81120278641024832
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1640,6 +1640,8 @@ MonoBehaviour:
   _life: 100
   _maxBoost: 200
   _boost: 200
+  score: 0
+  animator: {fileID: 0}
 --- !u!114 &114309559883932672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1829,7 +1831,9 @@ MonoBehaviour:
   steerSpeed: 1
   boostPowerTweaker: 5
   boostConsumptionTweaker: 20
-  jumpSuspensionMagnitude: 1
+  jumpCD: 1
+  jumpMult: 4
+  jumpSuspensionMagnitude: 0.5
   centerOfMass: {fileID: 4444712501172812}
   steering: 0
   handbreak: 0
