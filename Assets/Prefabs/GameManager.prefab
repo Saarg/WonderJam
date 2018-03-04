@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2e6cfc51def402d86e579d7641b65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scores: []
   _gameTime: 600
 --- !u!114 &114042314959856250
 MonoBehaviour:
@@ -779,16 +780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _players:
-  - _player: {fileID: 0}
-    lifeBar: {fileID: 114455029544350638}
-    score: {fileID: 114244672897351360}
-    time: {fileID: 114397347858771668}
-    speedo: {fileID: 114394690108986960}
-  - _player: {fileID: 0}
-    lifeBar: {fileID: 114363550446902360}
-    score: {fileID: 114677656141946060}
-    time: {fileID: 114679096660381612}
-    speedo: {fileID: 114923184400534002}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114902296407084062
 MonoBehaviour:
   m_ObjectHideFlags: 1
