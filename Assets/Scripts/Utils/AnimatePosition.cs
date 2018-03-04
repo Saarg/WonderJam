@@ -31,7 +31,8 @@ public class AnimatePosition : MonoBehaviour {
 	public bool runOnEnable = false;
 
 	public bool enableOnStart = true;
-	public bool disableOnStop = false;	
+	public bool disableOnStop = false;
+	public bool resetOnStop = true;
 
 	/// <summary>  
 	///		Start the animation if runOnStart is true
@@ -94,7 +95,9 @@ public class AnimatePosition : MonoBehaviour {
 		if (disableOnStop)
 			gameObject.SetActive(false);
 		
-		transform.localPosition = startPos;
-		transform.localRotation = Quaternion.Euler(startRot);
+		if (resetOnStop) {
+			transform.localPosition = startPos;
+			transform.localRotation = Quaternion.Euler(startRot);
+		}
 	}
 }
