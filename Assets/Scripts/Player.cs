@@ -22,10 +22,16 @@ public class Player : MonoBehaviour {
     float _boost = 100f;
     public float boost { get { return _boost; } }
 
+
     [SerializeField]
 	private float score = 0;
 
     public Animator animator;
+
+    [Header("Sounds")]
+    public AudioSource AudioSource;
+    public AudioClip crashSound;
+    private bool isCollisionSooundTriggered;
 		
 	public void ModifyLife( float bonus){
 		_life += bonus;
@@ -67,6 +73,14 @@ public class Player : MonoBehaviour {
         if (col.gameObject.CompareTag("Player"))
         {
             _life -= col.relativeVelocity.sqrMagnitude / 20;
+            if (!isCollisionSooundTriggered)
+            {
+                isCollisionSooundTriggered = true;
+                float force = GetComponent<WheelVehicle>().speed/25;
+                AudioSource.PlayOneShot(crashSound, force);
+            }
+
+            isCollisionSooundTriggered = false;
         }
 
 
