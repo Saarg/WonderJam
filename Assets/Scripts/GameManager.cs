@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		curTime = Time.realtimeSinceStartup - _startTime;
 
-		if (curTime >= _gameTime) {
+        if (curTime >= _gameTime) {
 			if (endOfGameUIPrefab != null && teams[0].player1UI != null) {
 				foreach (TeamData td in teams)
 					Destroy(teams[0].player1UI.gameObject);

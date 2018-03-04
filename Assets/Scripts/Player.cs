@@ -64,7 +64,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (_life <= 95)
+        if (_life <= 0)
         {
             animator.SetTrigger("Blown");
             explosion();

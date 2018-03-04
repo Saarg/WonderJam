@@ -183,7 +183,7 @@ MonoBehaviour:
     type: 2}
   endOfGameUIPrefab: {fileID: 1887215628541010, guid: ece2bf758b3484292ba163be6a373ca1,
     type: 2}
-  _gameTime: 600
+  _gameTime: 300
 --- !u!114 &114405483151544294
 MonoBehaviour:
   m_ObjectHideFlags: 1
