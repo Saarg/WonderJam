@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530494621698332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.74, y: 12.765549, z: -1.9574223}
+  m_LocalPosition: {x: 53.263145, y: 1, z: 35.7527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4488698388315042}
@@ -143,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134455561858278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.969995, y: -9.5905485, z: 5.9574223}
+  m_LocalPosition: {x: 0.507, y: 3.1599998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4250806659820912}
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182434830681880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.335995, y: -12.765549, z: 5.9574223}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4250806659820912}
@@ -169,7 +169,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851520915712422}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 11.435995, y: -9.376549, z: 5.9574223}
+  m_LocalPosition: {x: 0, y: 3.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4250806659820912}
@@ -182,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847414232911190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.082994, y: -9.596549, z: 5.959422}
+  m_LocalPosition: {x: 0.62, y: 3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4250806659820912}
@@ -478,7 +478,7 @@ MonoBehaviour:
   _entityType: 4
 --- !u!114 &114115836840972232
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134455561858278}
@@ -490,7 +490,7 @@ MonoBehaviour:
   _guid: 9c84afd4-047c-429a-97ad-879852f24aeb
 --- !u!114 &114182344808314910
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847414232911190}
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_selectedTriangles: 
 --- !u!114 &114280013318163190
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530494621698332}
@@ -5381,7 +5381,7 @@ MonoBehaviour:
   m_selectedTriangles: 
 --- !u!114 &114333270463781438
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851520915712422}
@@ -5417,7 +5417,7 @@ MonoBehaviour:
   _entityType: 4
 --- !u!114 &114583034728359736
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530494621698332}
@@ -6625,7 +6625,7 @@ MonoBehaviour:
   m_selectedTriangles: 
 --- !u!114 &114873585911266290
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182434830681880}
