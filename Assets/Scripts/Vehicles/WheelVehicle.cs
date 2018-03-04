@@ -67,6 +67,10 @@ public class WheelVehicle : MonoBehaviour {
 
     public float scale;
 
+    [Header("Sounds")]
+    public AudioSource BoostSource;
+    public AudioClip BoostClip;
+
     void Start ()
     {
         _rb = GetComponent<Rigidbody>();
@@ -103,10 +107,13 @@ public class WheelVehicle : MonoBehaviour {
             _rb.AddForce(transform.forward * _rb.mass * boostPowerTweaker);
             boostParticle.Emit((int)Mathf.Lerp(0, boostParticle.emission.rateOverTime.constantMax, deltaTime) );
             player.ModifyBoost(-boostConsumptionTweaker * deltaTime);
+            if (!BoostSource.isPlaying)
+                BoostSource.PlayOneShot(BoostClip, 5);
         }
         else
         {
             boostParticle.Stop();
+            BoostSource.Stop();
         }
         
         // Jump
