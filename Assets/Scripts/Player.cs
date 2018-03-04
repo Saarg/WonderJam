@@ -29,17 +29,21 @@ public class Player : MonoBehaviour {
 		
 	public void ModifyLife( float bonus){
 		_life += bonus;
-		if (life > _maxlife)
-			_life = _maxlife;
-		if (life < 0)
-			_life =0;
-		Debug.Log ("Vie joueur : " + life);
-	}
+		if (_life > _maxlife)
+        {
+            _life = _maxlife;
+
+        }else if (life < 0)
+        {
+            _life = 0;
+
+        }
+    }
 
     public void ModifyBoost(float bonus)
     {
         _boost += bonus;
-        if(boost > maxBoost)
+        if(_boost > maxBoost)
         {
             _boost = _maxBoost;
         }else if (boost< 0)
@@ -60,7 +64,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (_life <= 95)
+        if (_life <= 0)
         {
             animator.SetTrigger("Blown");
             explosion();

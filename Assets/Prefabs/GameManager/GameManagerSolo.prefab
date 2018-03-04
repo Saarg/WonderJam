@@ -142,7 +142,11 @@ MonoBehaviour:
     spawn2: {fileID: 0}
     player2: {fileID: 0}
     player2UI: {fileID: 0}
-  _gameTime: 600
+  countdownUIPrefab: {fileID: 1291761392042794, guid: 8326d49e8fff84ebf8f6d2c81b35563c,
+    type: 2}
+  endOfGameUIPrefab: {fileID: 1887215628541010, guid: ece2bf758b3484292ba163be6a373ca1,
+    type: 2}
+  _gameTime: 300
 --- !u!114 &114963550137026012
 MonoBehaviour:
   m_ObjectHideFlags: 1

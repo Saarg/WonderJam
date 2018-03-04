@@ -165,7 +165,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &114120018496328878
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986818270745132}
@@ -186,7 +186,7 @@ MonoBehaviour:
   _assetGuid: 924b99b993d384f8f8682ebddb6b204b
 --- !u!114 &114155277025282930
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986818270745132}
@@ -241,7 +241,11 @@ MonoBehaviour:
     spawn2: {fileID: 4349015908280868}
     player2: {fileID: 0}
     player2UI: {fileID: 0}
-  _gameTime: 600
+  countdownUIPrefab: {fileID: 1291761392042794, guid: 8326d49e8fff84ebf8f6d2c81b35563c,
+    type: 2}
+  endOfGameUIPrefab: {fileID: 1887215628541010, guid: ece2bf758b3484292ba163be6a373ca1,
+    type: 2}
+  _gameTime: 300
 --- !u!114 &114607904030410036
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -117,7 +117,7 @@ MonoBehaviour:
   _guid: dab63112-9f22-45de-b027-a960d5aa7a18
 --- !u!114 &114177413987650844
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
@@ -179,7 +179,11 @@ MonoBehaviour:
     spawn2: {fileID: 0}
     player2: {fileID: 0}
     player2UI: {fileID: 0}
-  _gameTime: 600
+  countdownUIPrefab: {fileID: 1291761392042794, guid: 8326d49e8fff84ebf8f6d2c81b35563c,
+    type: 2}
+  endOfGameUIPrefab: {fileID: 1887215628541010, guid: ece2bf758b3484292ba163be6a373ca1,
+    type: 2}
+  _gameTime: 300
 --- !u!114 &114405483151544294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,7 +198,7 @@ MonoBehaviour:
   players: []
 --- !u!114 &114705034067108940
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095280795094500}
