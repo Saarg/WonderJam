@@ -959,7 +959,7 @@ MonoBehaviour:
   curCar: {fileID: 1775911664165000, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
   spawnPoint: {fileID: 64190296}
   readyButton: {fileID: 256131303}
-  key: Player3Car
+  key: Player2Car
   nbPlayerInLobby: 4
   scene: 2v2
 --- !u!114 &64190298
@@ -1416,7 +1416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 3
+  m_Text: 2
 --- !u!222 &108579871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13157,7 +13157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   def: 1
-  key: Player2Controller
+  key: Player3Controller
 --- !u!114 &1299494912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20857,7 +20857,7 @@ MonoBehaviour:
   curCar: {fileID: 1775911664165000, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
   spawnPoint: {fileID: 1935827003}
   readyButton: {fileID: 1666589717}
-  key: Player2Car
+  key: Player3Car
   nbPlayerInLobby: 4
   scene: 2v2
 --- !u!114 &1935827005
@@ -21105,7 +21105,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 2
+  m_Text: 'Player 3
+
+'
 --- !u!222 &1967891434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22874,7 +22876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   def: 2
-  key: Player3Controller
+  key: Player2Controller
 --- !u!114 &2145913370
 MonoBehaviour:
   m_ObjectHideFlags: 0
