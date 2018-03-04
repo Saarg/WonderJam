@@ -29,6 +29,9 @@ public class GameUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (PlayerUI ui in players) {
+			if (ui == null)
+				continue;
+
 			if (_gameManager != null) {
 				ui.score.text = _gameManager.teams[(int)ui.playerStats.team].score.ToString();
 

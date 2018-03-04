@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
     float _maxBoost = 100f;
-    public float maxBoost { get { return _maxlife; } }
+    public float maxBoost { get { return _maxBoost; } }
     [SerializeField]
     float _boost = 100f;
     public float boost { get { return _boost; } }
@@ -27,14 +27,6 @@ public class Player : MonoBehaviour {
 
     public Animator animator;
 		
-	public void ModifyScore( float bonus){
-		score += bonus;
-		if (score < 0)
-			score =0;
-
-		Debug.Log ("Score joueur : " + score);
-	}
-
 	public void ModifyLife( float bonus){
 		_life += bonus;
 		if (life > _maxlife)
