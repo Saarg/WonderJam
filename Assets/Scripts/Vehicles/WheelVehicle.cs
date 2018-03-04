@@ -87,6 +87,10 @@ public class WheelVehicle : MonoBehaviour {
         {
             _rb.centerOfMass = centerOfMass.localPosition;
         }
+
+        if (BoostSource == null) {
+            BoostSource = GetComponents<AudioSource>()[2];
+        }
     }
 	
 	void FixedUpdate () {
@@ -112,13 +116,14 @@ public class WheelVehicle : MonoBehaviour {
             _rb.AddForce(transform.forward * _rb.mass * boostPowerTweaker);
             boostParticle.Emit((int)Mathf.Lerp(0, boostParticle.emission.rateOverTime.constantMax, deltaTime) );
             player.ModifyBoost(-boostConsumptionTweaker * deltaTime);
-            if (!BoostSource.isPlaying)
+            if (BoostSource != null && !BoostSource.isPlaying)
                 BoostSource.PlayOneShot(BoostClip, 5);
         }
         else
         {
             boostParticle.Stop();
-            BoostSource.Stop();
+            if (BoostSource != null)
+                BoostSource.Stop();
         }
         
         // Jump

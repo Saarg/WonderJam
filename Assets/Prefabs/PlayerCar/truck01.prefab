@@ -2130,8 +2130,6 @@ MonoBehaviour:
   acceleration: 57
   topSpeed: 78
   scale: 0.5
-  BoostSource: {fileID: 82209124030123248}
-  BoostClip: {fileID: 8300000, guid: 22b127dd82445bb4a8647f8eeeef9218, type: 3}
 --- !u!114 &114234429813773148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2691,8 +2689,6 @@ MonoBehaviour:
   _boost: 90
   score: 0
   animator: {fileID: 0}
-  AudioSource: {fileID: 82879228823595820}
-  crashSound: {fileID: 8300000, guid: 532060df4154319448c14bc75d14107d, type: 3}
 --- !u!114 &114859040844006450
 MonoBehaviour:
   m_ObjectHideFlags: 1

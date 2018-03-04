@@ -32,6 +32,11 @@ public class Player : MonoBehaviour {
     public AudioSource AudioSource;
     public AudioClip crashSound;
     private bool isCollisionSooundTriggered;
+
+    void Start() {
+        if (AudioSource == null)
+            AudioSource = GetComponents<AudioSource>()[1];
+    }
 		
 	public void ModifyLife( float bonus){
 		_life += bonus;
@@ -72,12 +77,17 @@ public class Player : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Player"))
         {
-            _life -= col.relativeVelocity.sqrMagnitude / 20;
+            float otherMass = col.gameObject.GetComponent<Rigidbody>().mass;
+            float myMass = GetComponent<Rigidbody>().mass;
+
+            _life -= col.relativeVelocity.sqrMagnitude / 20 * (otherMass / myMass);
             if (!isCollisionSooundTriggered)
             {
                 isCollisionSooundTriggered = true;
                 float force = GetComponent<WheelVehicle>().speed/25;
-                AudioSource.PlayOneShot(crashSound, force);
+
+                if (AudioSource != null)
+                    AudioSource.PlayOneShot(crashSound, force);
             }
 
             isCollisionSooundTriggered = false;
