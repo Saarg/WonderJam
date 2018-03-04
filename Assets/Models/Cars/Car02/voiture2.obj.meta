@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 10a25a6cb109da0468c6e595ed178d40
-timeCreated: 1520040595
+timeCreated: 1520141305
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -86,22 +86,6 @@ ModelImporter:
     4300022: hood_square_42
     4300024: trunk_square_48
     4300026: windshield_jeep_49
-    11400000: detail_bullbar_52
-    11400002: detail_engine_65
-    11400004: detail_exhaust_60
-    11400006: detail_exhaust_62
-    11400008: detail_fender_53
-    11400010: detail_fender_54
-    11400012: detail_fender_55
-    11400014: detail_fender_56
-    11400016: detail_mirror_57
-    11400018: detail_mirror_58
-    11400020: detail_rollbar_59
-    11400022: hood_square_42
-    11400024: trunk_square_48
-    11400026: //RootNode
-    11400028: //RootNode
-    11400030: windshield_jeep_49
   externalObjects: {}
   materials:
     importMaterials: 1
