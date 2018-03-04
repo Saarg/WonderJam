@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
     [Header("Sounds")]
     public AudioSource AudioSource;
     public AudioClip crashSound;
+    public AudioClip blownSound;
     private bool isCollisionSooundTriggered;
 
     void Start() {
@@ -110,6 +111,7 @@ public class Player : MonoBehaviour {
             
             enabled = false;
             GetComponent<WheelVehicle>().enabled = false;
+            GetComponent<EngineSoundManager>().enabled = false;
         }
     }
 
@@ -123,6 +125,8 @@ public class Player : MonoBehaviour {
 
             c.gameObject.GetComponent<MeshCollider>().convex = true;
             c.gameObject.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position - Vector3.up, 10);
+
+            AudioSource.PlayOneShot(blownSound, (float) 0.1);
         }
 
     }
