@@ -1995,7 +1995,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2019,7 +2019,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82854437894597380
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   _boost: 170
   score: 0
   animator: {fileID: 0}
-  AudioSource: {fileID: 82854437894597380}
+  AudioSource: {fileID: 82094507795244924}
   crashSound: {fileID: 8300000, guid: 532060df4154319448c14bc75d14107d, type: 3}
 --- !u!114 &114381947250503744
 MonoBehaviour:
@@ -2814,7 +2814,7 @@ MonoBehaviour:
   acceleration: 110
   topSpeed: 107
   scale: 1
-  BoostSource: {fileID: 82094507795244924}
+  BoostSource: {fileID: 82854437894597380}
   BoostClip: {fileID: 8300000, guid: 22b127dd82445bb4a8647f8eeeef9218, type: 3}
 --- !u!114 &114816098074405442
 MonoBehaviour:
