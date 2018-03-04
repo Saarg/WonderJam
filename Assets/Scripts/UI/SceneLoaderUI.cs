@@ -8,4 +8,8 @@ public class SceneLoaderUI : MonoBehaviour {
 	public void LoadScene(string n) {
 		SceneManager.LoadScene(n);
 	}
+
+	public void Quit() {
+		Application.Quit(); 
+	}
 }

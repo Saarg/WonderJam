@@ -2118,7 +2118,9 @@ MonoBehaviour:
   steerSpeed: 1
   boostPowerTweaker: 5
   boostConsumptionTweaker: 20
-  jumpSuspensionMagnitude: 1
+  jumpCD: 1
+  jumpMult: 4
+  jumpSuspensionMagnitude: 0.5
   centerOfMass: {fileID: 4801792241856210}
   steering: 0
   handbreak: 0

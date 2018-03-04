@@ -741,7 +741,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884781523372528}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000004768371}
-  m_LocalPosition: {x: 0.421, y: 0, z: 1.463}
+  m_LocalPosition: {x: 0.26, y: 0, z: 1.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4303275678840332}
@@ -860,7 +860,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1448803628216634}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.12, y: 0.581, z: -2.97}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4268718775429250}
@@ -999,7 +999,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344310848547666}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 0.50894535, y: 0, z: 1.5930005}
+  m_LocalPosition: {x: 0.34794533, y: 0, z: 1.5900006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4202091340145126}
@@ -1924,8 +1924,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.999757, y: 0.8346536, z: 2.7552745}
-  m_Center: {x: 0.08893713, y: 0.40121305, z: 0.14821553}
+  m_Size: {x: 1.36, y: 0.8346536, z: 3.53}
+  m_Center: {x: 0.03, y: 0.40121305, z: 0.96}
 --- !u!81 &81600951002339208
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2802,7 +2802,9 @@ MonoBehaviour:
   steerSpeed: 1
   boostPowerTweaker: 5
   boostConsumptionTweaker: 20
-  jumpSuspensionMagnitude: 1
+  jumpCD: 1
+  jumpMult: 4
+  jumpSuspensionMagnitude: 0.5
   centerOfMass: {fileID: 4553196594873608}
   steering: 0
   handbreak: 0
