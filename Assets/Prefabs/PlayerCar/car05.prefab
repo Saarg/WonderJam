@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 114342964377702266}
   - component: {fileID: 82706062148878824}
   - component: {fileID: 82316111681734862}
+  - component: {fileID: 82822092691316550}
   m_Layer: 0
   m_Name: car05
   m_TagString: Player
@@ -2464,6 +2465,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82822092691316550
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567702858198140}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114028065581967922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2543,7 +2624,7 @@ MonoBehaviour:
   score: 0
   animator: {fileID: 0}
   AudioSource: {fileID: 82706062148878824}
-  crashSound: {fileID: 8300000, guid: 532060df4154319448c14bc75d14107d, type: 3}
+  crashSound: {fileID: 8300000, guid: b2634848a0b5de0448bd88b50953c0ca, type: 3}
 --- !u!114 &114171246130412808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3319,6 +3400,11 @@ MonoBehaviour:
   spawnTransform: {fileID: 4052232275125120}
   scoreGainedCanvasPrefab: {fileID: 114896564257470058, guid: f02c6421fab201745adc4e369256d4b8,
     type: 2}
+  AudioSource: {fileID: 82718730125389756}
+  ExplosionClips:
+  - {fileID: 8300000, guid: 532060df4154319448c14bc75d14107d, type: 3}
+  - {fileID: 8300000, guid: f53156858d4dc1d42828dea9b2b9c103, type: 3}
+  - {fileID: 8300000, guid: 43aa85bef8c92ab439304f8ad1bcaac1, type: 3}
 --- !u!114 &114965334789916412
 MonoBehaviour:
   m_ObjectHideFlags: 1
