@@ -19,6 +19,7 @@ public class CarSelectorScript : MonoBehaviour
 
     public String key;
     public int nbPlayerInLobby;
+    public string scene = "1v1";
 
 	// Use this for initialization
 	void Start ()
@@ -81,9 +82,9 @@ public class CarSelectorScript : MonoBehaviour
 
         nbReady++;
 
-        if (nbReady >=nbPlayerInLobby)
+        if (nbReady >= nbPlayerInLobby)
         {
-            SceneManager.LoadSceneAsync("1V1");
+            SceneManager.LoadSceneAsync(scene);
         }
     }
 
