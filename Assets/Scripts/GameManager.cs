@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour {
 		Camera cam;
 		PlayerNumber pn;
 		foreach (TeamData t in teams) {
-			t.player1 = Instantiate(cars[PlayerPrefs.GetInt("Player" + (playernum+1) + "Car")], t.spawn1.position, t.spawn1.rotation);
+            t.player1 = Instantiate(cars[PlayerPrefs.GetInt("Player" + (playernum+1) + "Car")], t.spawn1.position, t.spawn1.rotation);
 			t.player1UI = Instantiate(playerUIPrefab, transform).GetComponent<PlayerUI>();
 			t.player1UI.player = t.player1;
 			cam = t.player1.GetComponentInChildren<Camera>();

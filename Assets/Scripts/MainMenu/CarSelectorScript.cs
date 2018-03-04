@@ -78,7 +78,7 @@ public class CarSelectorScript : MonoBehaviour
     public void PlayerReady()
     {
         readyButton.interactable = false;
-        PlayerPrefs.SetInt(name, curCarIndex);
+        PlayerPrefs.SetInt(key, curCarIndex);
 
         nbReady++;
 

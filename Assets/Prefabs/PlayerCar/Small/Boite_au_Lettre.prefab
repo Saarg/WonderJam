@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 64906368625820294}
   - component: {fileID: 54137045274532890}
   - component: {fileID: 138593190475913744}
+  - component: {fileID: 114988470414564924}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -41,6 +42,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4232272796451380}
+  - component: {fileID: 114424442186453142}
+  - component: {fileID: 114416630463782568}
   m_Layer: 0
   m_Name: Boite_au_Lettre
   m_TagString: Untagged
@@ -63,6 +66,7 @@ GameObject:
   - component: {fileID: 54565644977051478}
   - component: {fileID: 138457298280905232}
   - component: {fileID: 65357390190813982}
+  - component: {fileID: 114266313419978960}
   m_Layer: 0
   m_Name: poteau
   m_TagString: Untagged
@@ -85,6 +89,7 @@ GameObject:
   - component: {fileID: 54527204249995852}
   - component: {fileID: 59293503839715496}
   - component: {fileID: 65065011073322108}
+  - component: {fileID: 114583447761506478}
   m_Layer: 0
   m_Name: drapeau
   m_TagString: Untagged
@@ -106,6 +111,7 @@ GameObject:
   - component: {fileID: 114902706431005158}
   - component: {fileID: 64768410857863316}
   - component: {fileID: 54611421862529318}
+  - component: {fileID: 114535337743404476}
   m_Layer: 0
   m_Name: boite
   m_TagString: Untagged
@@ -778,6 +784,18 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114266313419978960
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467205632665402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 8e9c39c6-088e-4953-9a69-07e47109d605
 --- !u!114 &114389231187038352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -790,6 +808,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 4
+--- !u!114 &114416630463782568
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443315876028200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: dca9a140-d61b-43a6-8d3f-2d706b9fa681
+--- !u!114 &114424442186453142
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443315876028200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isConnected: 1
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1443315876028200}
+    - {fileID: 1467205632665402}
+    - {fileID: 1872576721721432}
+    - {fileID: 1144048423055740}
+    - {fileID: 1592042045329984}
+  _assetGuid: 58765f5feb4d94c5dad5f82b7311bd2d
 --- !u!114 &114472211695691626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -802,6 +853,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 4
+--- !u!114 &114535337743404476
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872576721721432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 02e2c5fc-d31e-4cca-9b32-85145ccb96c7
+--- !u!114 &114583447761506478
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592042045329984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 3edbcbb2-1b9d-4329-9bf1-b67037f60603
 --- !u!114 &114635440352111064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5944,6 +6019,18 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114988470414564924
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1144048423055740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: c34c6c99-6b99-4732-af2d-72e05a90d09a
 --- !u!138 &138457298280905232
 FixedJoint:
   m_ObjectHideFlags: 1

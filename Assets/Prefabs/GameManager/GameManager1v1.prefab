@@ -158,19 +158,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars:
-  - {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
-  - {fileID: 1201695665092174, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+  - {fileID: 1775911664165000, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
+  - {fileID: 1306648714655038, guid: 7c62c87b11341644ba86071b3e2a6938, type: 2}
+  - {fileID: 1448803628216634, guid: bd4d3f5ba8ddd1b4ba30c4de81e2e190, type: 2}
+  - {fileID: 1093551142410898, guid: 7bb38afca755fac43a2ca4579446e64e, type: 2}
+  - {fileID: 1567702858198140, guid: b42ef4dcaa04b57488af16bee09407e8, type: 2}
+  - {fileID: 1144662150048640, guid: 437f4ae2f32178a46946e8d137c8f3ea, type: 2}
   playerUIPrefab: {fileID: 1210938088285204, guid: e6a978df287e54942abef7cc732e2aad,
     type: 2}
   teams:
   - spawn1: {fileID: 4016715410923476}
-    player1: {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
+    player1: {fileID: 0}
     player1UI: {fileID: 0}
     spawn2: {fileID: 0}
     player2: {fileID: 0}
     player2UI: {fileID: 0}
   - spawn1: {fileID: 4343212090369214}
-    player1: {fileID: 1151526292522468, guid: f9932b7fb82d10d4e9a68677b6ad26a0, type: 2}
+    player1: {fileID: 0}
     player1UI: {fileID: 0}
     spawn2: {fileID: 0}
     player2: {fileID: 0}

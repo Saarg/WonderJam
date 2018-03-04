@@ -631,7 +631,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 48a7e632-8a1c-4337-8984-51389d143da6
   projectName: WonderJam
   organizationId: milsonneau-jean-free-fr
