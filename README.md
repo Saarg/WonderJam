@@ -13,7 +13,7 @@ Our game is a local nultiplayer destruction derby. You have 5 minutes to to as m
 
 ## Main menus
 ![Main Menu](Screenshots/Menu.png)
-![Main Menu](Screenshots/1v1Menu.png)
+![Main Menu](Screenshots/1v1Mode.png)
 ![Main Menu](Screenshots/2v2Menu.png)
 
 ## Split screen
